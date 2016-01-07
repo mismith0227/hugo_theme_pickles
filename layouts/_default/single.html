@@ -1,0 +1,34 @@
+{{ partial "header.html" . }}
+  <article class="post-area">
+    <header class="entry-header">
+      <span class="post-date">{{ .Params.post_date }}</span>
+      <h1 class="entry-header-title">{{ .Title }}</h1>
+    </header>
+
+    <div class="post-content">
+      {{ .Content }}
+    </div>
+    <div class="sns">
+      <div class="sns-btns">
+        <a href="https://twitter.com/share" class="twitter-share-button"{count} data-via="misumi_takuma">Tweet</a>
+      </div>
+      <div class="sns-btns">
+        <div class="fb-share-button" data-href="{{ .Permalink }}" data-layout="button_count"></div>
+      </div>
+      <div class="sns-btns">
+        <a href="http://b.hatena.ne.jp/entry/{{ .Permalink }}" class="hatena-bookmark-button" data-hatena-bookmark-title="pickeles" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
+      </div>
+    </div>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5&appId=1600350913562750";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+  </article>
+{{ partial "footer.html" . }}

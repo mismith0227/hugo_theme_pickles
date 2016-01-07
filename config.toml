@@ -1,0 +1,9 @@
+baseurl = "http://127.0.0.1:1313"
+languageCode = "ja"
+title = "pickles"
+
+[Params]
+site_name = "pickles"
+description = "つけものブログ"
+twitter = "https://twitter.com/misumi_takuma"
+github = "https://github.com/mismith0227"
