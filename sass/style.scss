@@ -31,6 +31,9 @@ header,main,footer {
   margin: 0 auto;
 }
 
+// リンク色
+$linkColor: #07a2a6;
+
 /*
   ヘッダー
 */
@@ -92,7 +95,7 @@ header,main,footer {
       font-family: 'Ubuntu', sans-serif;
     }
     a {
-      color: #2175b4;
+      color: $linkColor;
       font-size: rem(24);
     }
   }
@@ -102,7 +105,7 @@ nav.pagination {
     text-align: center;
     margin-top: 80px;
     a {
-      color: #2175b4;
+      color: $linkColor;
     }
     .current-page {
       margin: 0 rem(16);
@@ -157,7 +160,7 @@ nav.pagination {
     font-size: rem(16);
     font-weight: normal;
     a {
-      color: #2175b4;
+      color: $linkColor;
     }
   }
   p {
@@ -273,7 +276,7 @@ nav.pagination {
   }
 
   a {
-    color: #2175b4;
+    color: $linkColor;
   }
 
 }
