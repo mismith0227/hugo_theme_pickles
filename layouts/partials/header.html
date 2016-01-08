@@ -6,11 +6,11 @@
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:image" content="">
   <meta property="og:site_name" content="{{ .Title }}｜{{ .Site.Params.site_name }}">
-  <meta property="og:description" content="{{ .Site.Params.description }}">
+  <meta property="og:description" content="{{ .Params.og_description }}">
   <meta itemprop="image" content="">
   <meta name="description" content="{{ .Site.Params.description }}">
   <meta name="keywords" content="web制作,その他">
-  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:description" content="{{ .Site.Params.description }}">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:description" content="{{ .Params.og_description }}">
   <meta name="twitter:image" content="">
   <meta name="twitter:title" content="{{ .Title }}｜{{ .Site.Params.site_name }}">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -34,7 +34,7 @@
     <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Params.site_name }}</a></h1>
     <nav class="header-nav">
       <ul class="header-list">
-        <li><a href="{{ .Site.Params.twitter }}">Twitter</a></li>
+        <li><a href="https://twitter.com/{{ .Site.Params.twitter_account }}">Twitter</a></li>
         <li><a href="{{ .Site.Params.github }}">GitHub</a></li>
       </ul>
     </nav>

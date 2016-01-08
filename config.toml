@@ -5,6 +5,6 @@ title = "pickles"
 [Params]
 site_name = "pickles"
 description = "つけものブログ"
-twitter = "https://twitter.com/misumi_takuma"
+twitter_account = "misumi_takuma"
 github = "https://github.com/mismith0227"
-analytics = "UA-12345678-9"
+analytics = "UA-51630362-4"
