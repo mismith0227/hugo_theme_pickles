@@ -3,8 +3,11 @@ languageCode = "ja"
 title = "pickles"
 
 [Params]
-site_name = "pickles"
-description = "つけものブログ"
-twitter_account = "misumi_takuma"
-github_account = "mismith0227"
-analytics = "UA-51630362-4"
+site_name = "title"
+description = "description"
+twitter_account = "twitter"
+github_account = "github"
+analytics = "UA-12345678-9"
+
+[permalinks]
+pages = "/:slug/"
