@@ -2,10 +2,9 @@
   <article class="post-area">
     <ul class="posts-lists">
       {{ $paginator := .Paginate (where .Data.Pages "Type" "posts") }}
-        {{ range $paginator.Pages }}
-          {{ .Render "list" }}
-        {{ end }}
-      {{ partial "pagination.html" . }}
+      {{ range $paginator.Pages }}
+        {{ .Render "list" }}
+      {{ end }}
     </ul>
 
     {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
