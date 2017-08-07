@@ -1,5 +1,5 @@
-+++
-date  = ""
-Title = ""
-og_description = ""
-+++
+---
+title: "{{ replace .TranslationBaseName "-" " " | title }}"
+date: {{ .Date }}
+draft: true
+---

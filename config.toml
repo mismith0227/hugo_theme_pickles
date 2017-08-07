@@ -7,7 +7,7 @@ site_name = "title"
 description = "description"
 twitter_account = "twitter"
 github_account = "github"
-analytics = "UA-12345678-9"
+analytics = ""
 
 [permalinks]
 pages = "/:slug/"
