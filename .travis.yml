@@ -16,7 +16,7 @@ branches:
 before_script: bash ./bin/build.sh
 
 script:
-    - ls -al style.css
+    - ls -al static/css/style.css
 
 after_success: bash ./bin/deploy.sh
 

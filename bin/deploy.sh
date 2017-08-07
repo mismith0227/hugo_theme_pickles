@@ -24,6 +24,7 @@ bin
 gulpfile.babel.js
 config.js
 node_modules
+content
 package.json
 svgpack
 tmp
