@@ -18,11 +18,9 @@ echo ".bowerrc
 .travis.yml
 .gitignore
 .babelrc
-webpack.config.js
 webpack.config.babel.js
 README.md
 bin
-bower.json
 gulpfile.babel.js
 config.js
 node_modules
@@ -30,6 +28,7 @@ package.json
 svgpack
 tmp
 src/css
+src/js
 src/images
 yarn.lock" > .gitignore
 
