@@ -19,7 +19,6 @@ echo ".bowerrc
 .gitignore
 .babelrc
 webpack.config.babel.js
-README.md
 bin
 gulpfile.babel.js
 config.js
