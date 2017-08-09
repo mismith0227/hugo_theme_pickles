@@ -1,40 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
-<head prefix="og: http://ogp.me/ns#">
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-  <meta property="og:title" content="{{ if ne .URL "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}" />
-  {{ with .Site.Params.themecolor }}
-  <meta name="theme-color" content="{{ . }}" />
-  {{ end }}
-  <meta property="og:site_name" content="{{ .Site.Title }}" />
-  <meta property="og:url" content="{{ .Permalink }}" />
-  {{ with .Params.images }}{{ range first 5 . }}
-  <meta property="og:image" content="{{ . }}" />
-  {{ end }}{{ end }}
-  {{ if .IsPage }}
-  <meta property="og:type" content="article" />
-  {{ with .Site.Params.facebook }}
-  <meta property="og:article:author" content="https://facebook.com/{{ . }}" />
-  {{ end }}
-  <meta property="og:article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}" />
-  {{ range .Params.tags }}
-  <meta property="og:article:tag" content="{{ . }}" />
-  {{ end }}
-  {{ else }}
-  <meta property="og:type" content="website" />
-  {{ end }}
-
-  <title>
-    {{ if ne .URL "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}
-  </title>
-
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css" />
-  <link rel="shortcut icon" href="{{ .Site.BaseURL }}images/favicon.ico" />
-  {{ if eq .URL "/" }}
-  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-  {{ end }}
-</head>
+{{ partial "head.html" . }}
 <body>
   <header>
     <section>
