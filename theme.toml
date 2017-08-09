@@ -1,0 +1,6 @@
+author = "Takuma Misumi"
+description = "Pickles is a modern, simple and beautiful Hugo theme"
+license = "MIT"
+name = "Pickles"
+source_repo = "git@github.com:mismith0227/hugo_theme_pickles.git"
+tags = ["blog", "tags"]

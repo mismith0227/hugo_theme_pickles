@@ -1,3 +1,9 @@
 body {
   background: #fff;
 }
+
+h1 {
+  & a {
+    color: #333;
+  }
+}

@@ -1,1 +1,12 @@
-body{background:#fff}
+body {
+  background: #fff;
+}
+
+h1 {
+}
+
+h1 a {
+  color: #333;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGlCQUFpQjtDQUNsQjs7QUFFRDtDQUlDOztBQUhDO0VBQ0UsWUFBWTtDQUNiIiwiZmlsZSI6InN0eWxlLmNzcyIsInNvdXJjZXNDb250ZW50IjpbImJvZHkge1xuICBiYWNrZ3JvdW5kOiAjZmZmO1xufVxuXG5oMSB7XG4gICYgYSB7XG4gICAgY29sb3I6ICMzMzM7XG4gIH1cbn1cbiJdfQ== */
