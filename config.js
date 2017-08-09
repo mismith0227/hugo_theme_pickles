@@ -53,6 +53,15 @@ const tasks = {
     src: `${config.dirs.src}/images/**/*`,
     dest: `${config.dirs.dest}/images`
   },
+  svg: {
+    src: `${config.dirs.src}/svg/*.svg`,
+    dest: './svgpack'
+  },
+  svgRename: {
+    src: './svgpack/svgpack-sprite.svg',
+    dest: './layouts/partials',
+    filename: 'svgpack-sprite.html'
+  },
   clean: [
     config.dirs.dest
   ]

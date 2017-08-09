@@ -5,7 +5,9 @@ import gulpIf from 'gulp-if'
 import image from 'gulp-imagemin'
 import plumber from 'gulp-plumber'
 import postcss from 'gulp-postcss'
+import rename from 'gulp-rename'
 import sourcemaps from 'gulp-sourcemaps'
+import Svgpack from 'svgpack'
 import runSequence from 'run-sequence'
 import webpack from 'webpack'
 import webpackConfig from './webpack.config.babel'
@@ -49,6 +51,22 @@ gulp.task('image', () => {
     .pipe(gulp.dest(config.tasks.images.dest))
 })
 
+// SVG
+// =====================================================
+gulp.task('svg', () => {
+  var svg = new Svgpack(config.tasks.svg.src, {
+    dest: config.tasks.svg.dest
+  })
+  svg.init()
+})
+
+gulp.task('svg:rename', () => {
+  return gulp
+    .src(config.tasks.svgRename.src)
+    .pipe(rename(config.tasks.svgRename.filename))
+    .pipe(gulp.dest(config.tasks.svgRename.dest))
+})
+
 // Watch
 // =====================================================
 gulp.task('watch', () => {
@@ -71,10 +89,12 @@ gulp.task('clean', (cb) => {
 // =====================================================
 gulp.task('default', (cb) => {
   return runSequence(
+    ['svg'],
     'css',
     'webpack',
     'image',
     'watch',
+    'svg:rename',
     cb
   )
 })
@@ -84,9 +104,11 @@ gulp.task('default', (cb) => {
 gulp.task('build', (cb) => {
   return runSequence(
     'clean',
+    ['svg'],
     'css',
     'webpack',
     'image',
+    'svg:rename',
     cb
   )
 })

@@ -12,6 +12,7 @@ Pickles is a modern, simple and beautiful Hugo theme.
 * webpack
 * PostCSS
 * Babel
+* SVG Sprite
 * Standard
 
 ## Installation

@@ -23,6 +23,7 @@
     "gulp-imagemin": "^3.1.1",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.3.0",
     "minimist": "^1.2.0",
     "postcss-apply": "^0.4.0",
@@ -36,6 +37,7 @@
     "run-sequence": "^1.2.2",
     "standard": "^10.0.3",
     "standard-loader": "^6.0.1",
+    "svgpack": "^3.1.1",
     "webpack": "^2.2.1",
     "webpack-stream": "^3.2.0"
   }

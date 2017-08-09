@@ -27,9 +27,7 @@ content
 package.json
 svgpack
 tmp
-src/css
-src/js
-src/images
+src
 yarn.lock" > .gitignore
 
 git init
