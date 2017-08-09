@@ -1,22 +1,10 @@
 {{ partial "header.html" . }}
-  <article class="post-area">
-    <ul class="posts-lists">
-      {{ $paginator := .Paginate (where .Data.Pages "Type" "posts") }}
-      {{ range $paginator.Pages }}
-        {{ .Render "list" }}
-      {{ end }}
-    </ul>
-
-    {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
-      <nav class="pagination">
-        {{ if .Paginator.HasPrev }}
-        <a href="{{ .Paginator.Prev.URL }}">前へ</a>
-        {{ end }}
-        <span class="current-page">Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</span>
-        {{ if .Paginator.HasNext }}
-        <a href="{{ .Paginator.Next.URL }}">次へ</a>
-        {{ end }}
-      </nav>
-    {{ end }}
-  </article>
+<div>
+  {{ range $index, $page := .Paginator.Pages }}
+  {{ if ne $index 0 }}
+  {{ end }}
+  {{ .Render "li" }}
+  {{ end }}
+</div>
+{{ partial "pagination.html" .Paginator }}
 {{ partial "footer.html" . }}

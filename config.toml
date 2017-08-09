@@ -1,13 +1,31 @@
-baseurl = "http://mismith0227.github.io/"
-languageCode = "ja"
-title = "pickles"
+baseurl = "Your site URL"
+languageCode = "en-us"
+title = "Your site title"
+# Copyright notice. This is displayer in the footer.
+copyright = "&copy; Copyright notice"
 
-[Params]
-site_name = "title"
-description = "description"
-twitter_account = "twitter"
-github_account = "github"
-analytics = ""
-
-[permalinks]
-pages = "/:slug/"
+[params]
+    # Social accounts. Link to these accounts are displayed in the header and
+    # footer.
+    title = "Your site title"
+    twitter = "Your Twitter username"
+    github = "Your GitHub username"
+    linkedin = "Your LinkedIn username"
+    googleplus = "Your Google+ user id"
+    facebook = "Your Facebook username"
+    stackoverflow = "Your Stackoverflow user id (number)"
+    keybase = "Your keybase.io username"
+    instagram = "Your Instagram username"
+    # Disqus shortname
+    disqus = "Your disqus shortname"
+    # Google Analytics API key.
+    ga_api_key = "Your Google Analytics tracking id"
+    # Mixpanel API key.
+    mixpanel_api_key = "Your Mixpanel API key"
+    author = "Your Name"
+    avatar = "/path/to/avatar"
+    contact = "Your contact link (ex. mailto:foo@example.com)"
+    bio = "Your short bio"
+    # Short subtitle/tagline. This is displayed in the header.
+    subtitle = "Short subtitle/tagline of your blog"
+    themecolor = "#hexcolor" # Defines the tab color in Chrome for Android.

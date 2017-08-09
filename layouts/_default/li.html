@@ -1,0 +1,23 @@
+<article>
+  <header>
+    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    <div>
+      <div>
+        Posted on
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+          {{ .Date.Format "Jan 2, 2006" }}
+        </time>
+      </div>
+    </div>
+  </header>
+  <div>
+    {{ .Summary }}
+  </div>
+  {{ if .Truncated }}
+  <footer>
+    <ul>
+      <li><a href="{{ .Permalink }}">Read more <span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+  </footer>
+  {{ end }}
+</article>

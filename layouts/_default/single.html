@@ -1,23 +1,74 @@
 {{ partial "header.html" . }}
-  <article class="post-area">
-    <header class="entry-header">
-      <span class="post-date">{{ .Date.Format "Jan 02, 2006" }}</span>
-      <h1 class="entry-header-title">{{ .Title }}</h1>
-    </header>
+{{ $baseurl := .Site.BaseURL }}
+<article>
+  <header>
+    <h1>{{ .Title }}</h1>
+    <div>
+      <div>
+        Posted on
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+          {{ .Date.Format "Jan 2, 2006" }}
+        </time>
+      </div>
+      <div>
+        {{ range .Params.tags }}
+        <span><a href="{{ $baseurl }}/tags/{{ . | urlize }}">#{{ . }}</a></span>
+        {{ end }}
+      </div>
+    </div>
+  </header>
+  <section>
+    {{ .Content }}
+  </section>
+  <footer>
+    {{ with .Site.Params.disqus }}
+    <hr/>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = '{{ . }}';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    {{ end }}
+    <section>
+      <div>
+        {{ with .Site.Params.avatar }}
+        <img alt="Author Avatar" src="{{ . }}" />
+        {{ end }}
+      </div>
+      <div>
+        {{ with .Site.Params.author }}
+        <h1>{{ . }}</h1>
+        {{ end }}
+        {{ with .Site.Params.bio }}
+        <div>{{ . }}</div>
+        {{ end }}
+      </div>
+      {{ with .Site.Params.contact }}
+      <div>
+        <a href="{{ . }}">
+          &nbsp;Contact me
+        </a>
+      </div>
+      {{ end }}
+    </section>
+    <ul>
+      {{ if .Next }}
+      <li><a href="{{ .Next.Permalink }}"><span aria-hidden="true">&larr;</span> Older</a></li>
+      {{ else }}
+      <li><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+      {{ end }}
+      {{ if .Prev }}
+      <li><a href="{{ .Prev.Permalink }}">Newer <span aria-hidden="true">&rarr;</span></a></li>
+      {{ else }}
+      <li><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+      {{ end }}
+    </ul>
+  </footer>
+</article>
 
-    <div class="post-content">
-      {{ .Content }}
-    </div>
-    <div class="sns">
-      <div class="sns-btns">
-        <a href="https://twitter.com/share" class="twitter-share-button"{count} data-via="{{ .Site.Params.twitter_account }}">Tweet</a>
-      </div>
-      <div class="sns-btns">
-        <div class="fb-share-button" data-href="{{ .Permalink }}" data-layout="button_count"></div>
-      </div>
-      <div class="sns-btns">
-        <a href="http://b.hatena.ne.jp/entry/{{ .Permalink }}" class="hatena-bookmark-button" data-hatena-bookmark-title="pickeles" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
-      </div>
-    </div>
-  </article>
 {{ partial "footer.html" . }}

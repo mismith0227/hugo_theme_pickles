@@ -1,0 +1,12 @@
+<nav role="navigation">
+{{ if or .HasPrev .HasNext }}
+  <hr />
+{{ end }}
+{{if .HasPrev}}
+<a href="{{ .Prev.URL }}"><span aria-hidden="true">&laquo;</span> Newer Posts</a>
+{{end}}
+  <span>Page {{ .PageNumber }} of {{.TotalPages}}</span>
+{{if .HasNext}}
+<a href="{{ .Next.URL }}">Older Posts <span aria-hidden="true">&raquo;</span></a>
+{{end}}
+</nav>
