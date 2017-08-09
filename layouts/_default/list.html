@@ -2,7 +2,6 @@
 <section>
   <h1>{{ .Title }}</h1>
   {{ range .Data.Pages }}
-  <hr/>
   {{ .Render "li" }}
   {{ end }}
 </section>

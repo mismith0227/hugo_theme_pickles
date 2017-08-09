@@ -1,4 +1,4 @@
-baseurl = "Your site URL"
+baseurl = "https://pickles.work/"
 languageCode = "en-us"
 title = "Your site title"
 # Copyright notice. This is displayer in the footer.

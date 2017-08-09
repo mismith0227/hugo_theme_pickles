@@ -6,7 +6,7 @@
   <meta property="og:title" content="{{ if ne .URL "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}" />
   {{ with .Site.Params.themecolor }}
   <meta name="theme-color" content="{{ . }}" />
- {{ end }}
+  {{ end }}
   <meta property="og:site_name" content="{{ .Site.Title }}" />
   <meta property="og:url" content="{{ .Permalink }}" />
   {{ with .Params.images }}{{ range first 5 . }}
@@ -29,19 +29,14 @@
     {{ if ne .URL "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}
   </title>
 
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/bootstrap.min.css" />
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/main.css" />
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/font-awesome.min.css" />
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/github.css" />
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css" />
   <link rel="shortcut icon" href="{{ .Site.BaseURL }}images/favicon.ico" />
-  <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}images/apple-touch-icon.png" />
   {{ if eq .URL "/" }}
   <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
   {{ end }}
 </head>
 <body>
-    <header style="background-image:url({{ if isset .Params "image" }}{{ .Params.image }} {{ else }} /images/bg.jpg {{ end }})">
+  <header>
     <section>
       <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
       {{ with .Site.Params.subtitle }}
