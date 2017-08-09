@@ -28,6 +28,7 @@ package.json
 svgpack
 tmp
 src
+config.toml
 yarn.lock" > .gitignore
 
 git init
