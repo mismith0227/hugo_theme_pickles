@@ -2,6 +2,7 @@
 <html lang="{{ .Site.LanguageCode }}">
 {{ partial "head.html" . }}
 <body>
+  {{ partial "svgpack-sprite.html" . }}
   <header>
     {{ if .IsPage }}
     <p><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></p>
