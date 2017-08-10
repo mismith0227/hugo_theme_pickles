@@ -12,7 +12,7 @@
       </div>
       <div>
         {{ range .Params.tags }}
-        <span><a href="{{ $baseurl }}/tags/{{ . | urlize }}">#{{ . }}</a></span>
+        <span><a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a></span>
         {{ end }}
       </div>
     </div>
@@ -22,7 +22,6 @@
   </section>
   <footer>
     {{ with .Site.Params.disqus }}
-    <hr/>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
       var disqus_shortname = '{{ . }}';
@@ -34,28 +33,7 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     {{ end }}
-    <section>
-      <div>
-        {{ with .Site.Params.avatar }}
-        <img alt="Author Avatar" src="{{ . }}" />
-        {{ end }}
-      </div>
-      <div>
-        {{ with .Site.Params.author }}
-        <h1>{{ . }}</h1>
-        {{ end }}
-        {{ with .Site.Params.bio }}
-        <div>{{ . }}</div>
-        {{ end }}
-      </div>
-      {{ with .Site.Params.contact }}
-      <div>
-        <a href="{{ . }}">
-          &nbsp;Contact me
-        </a>
-      </div>
-      {{ end }}
-    </section>
+    {{ partial "siteinfo.html" . }}
     <ul>
       {{ if .Next }}
       <li><a href="{{ .Next.Permalink }}"><span aria-hidden="true">&larr;</span> Older</a></li>

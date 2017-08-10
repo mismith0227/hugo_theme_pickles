@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 {{ $baseurl := .Site.BaseURL}}
 <section>
-  <h1>{{ .Title }}</h1>
+  <h2>{{ .Title }}</h2>
   <ul>
     {{ $data := .Data }}
     {{ range $key, $value := .Data.Terms }}

@@ -3,24 +3,21 @@
 {{ partial "head.html" . }}
 <body>
   <header>
-    <section>
-      <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
-      {{ with .Site.Params.subtitle }}
-      <div>
-        {{ . }}
-      </div>
-      {{ end }}
-      {{ partial "link.html" . }}
-      {{ if ne .URL "/" }}
-      <a href="{{ .Site.BaseURL }}">
-        &nbsp;Home
-      </a>
-      {{ end }}
-      {{ with .RSSLink }}
-      <a href="{{ . }}">
-        &nbsp;Subscribe
-      </a>
-      {{ end }}
-    </section>
+    {{ if .IsPage }}
+    <p><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></p>
+    {{ else }}
+    <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+    {{ end }}
+    {{ with .Site.Params.subtitle }}
+    <p>
+      {{ . }}
+    </p>
+    {{ end }}
+    {{ partial "link.html" . }}
+    {{ with .RSSLink }}
+    <a href="{{ . }}">
+      &nbsp;Subscribe
+    </a>
+    {{ end }}
   </header>
   <main>

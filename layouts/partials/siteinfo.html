@@ -1,0 +1,22 @@
+<aside>
+  <div>
+    {{ with .Site.Params.avatar }}
+    <img alt="Author Avatar" src="{{ . }}" />
+    {{ end }}
+  </div>
+  <div>
+    {{ with .Site.Params.author }}
+    <p>{{ . }}</p>
+    {{ end }}
+    {{ with .Site.Params.bio }}
+    <p>{{ . }}</p>
+    {{ end }}
+  </div>
+  {{ with .Site.Params.contact }}
+  <div>
+    <a href="{{ . }}">
+      Contact me
+    </a>
+  </div>
+  {{ end }}
+</aside>

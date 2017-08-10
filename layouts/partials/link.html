@@ -1,37 +1,51 @@
-<div>
+<ul>
   {{ with .Site.Params.contact }}
-  <a href="{{ . }}">
-    <i class="fa fa-envelope"></i>
-  </a>
+  <li>
+    <a href="{{ . }}">
+    コンタクト
+    </a>
+  </li>
   {{ end }}
   {{ with .Site.Params.twitter }}
-  <a href="https://twitter.com/{{ . }}" target="_blank">
-    twitter
-  </a>
+  <li>
+    <a href="https://twitter.com/{{ . }}" target="_blank">
+      twitter
+    </a>
+  </li>
   {{ end }}
   {{ with .Site.Params.instagram }}
-  <a href="https://instagram.com/{{ . }}" target="_blank">
-    instagram
-  </a>
+  <li>
+    <a href="https://instagram.com/{{ . }}" target="_blank">
+      instagram
+    </a>
+  </li>
   {{ end }}
   {{ with .Site.Params.googleplus }}
-  <a href="https://plus.google.com/+{{ . }}" target="_blank">
-    googleplus
-  </a>
+  <li>
+    <a href="https://plus.google.com/+{{ . }}" target="_blank">
+      googleplus
+    </a>
+  </li>
   {{ end }}
   {{ with .Site.Params.facebook }}
-  <a href="https://facebook.com/{{ . }}" target="_blank">
-    facebook
-  </a>
+  <li>
+    <a href="https://facebook.com/{{ . }}" target="_blank">
+      facebook
+    </a>
+  </li>
   {{ end }}
   {{ with .Site.Params.github }}
-  <a href="https://github.com/{{ . }}" target="_blank">
-    github
-  </a>
+  <li>
+    <a href="https://github.com/{{ . }}" target="_blank">
+      github
+    </a>
+  </li>
   {{ end }}
   {{ with .Site.Params.linkedin }}
-  <a href="https://linkedin.com/in/{{ . }}" target="_blank">
-    linkedin
-  </a>
+  <li>
+    <a href="https://linkedin.com/in/{{ . }}" target="_blank">
+      linkedin
+    </a>
+  </li>
   {{ end }}
-</div>
+</ul>

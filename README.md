@@ -44,9 +44,13 @@ $ hugo server -t hugo_theme_pickles -w -D
 
         // Development
         $ yarn run dev
+        $ // On another tab
+        $ hugo server
 
         // Production (compress)
         $ yarn run prod
+        $ // On another tab
+        $ hugo server
 
         // Build
         $ yarn run build

@@ -1,8 +1,22 @@
   </main>
   <footer>
-    <div>
-      {{ .Site.Copyright | safeHTML }}
-    </div>
+    <p>
+      {{ if .Site.Params.author }}
+        {{ if .Site.Params.authorwebsite }}
+          <a href="{{ .Site.Params.authorwebsite }}">{{ .Site.Params.author }}</a>
+        {{ else }}
+          {{ .Site.Params.author }}
+        {{ end }}
+      {{ end }}
+
+      &nbsp;&bull;&nbsp;
+      {{ .Site.LastChange.Format "2006" }}
+
+      {{ if .Site.Title }}
+        &nbsp;&bull;&nbsp;
+        <a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a>
+      {{ end }}
+    </p>
     {{ partial "link.html" . }}
   </footer>
 
@@ -16,5 +30,7 @@
     ga('send', 'pageview');
   </script>
   {{ end }}
+
+  {{- partial "footer_custom.html" . }}
 </body>
 </html>

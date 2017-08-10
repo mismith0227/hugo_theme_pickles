@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "hugo server & gulp",
-    "prod": "yarn run build && hugo server & gulp --env production",
+    "hugo": "hugo server",
+    "dev": "gulp",
+    "prod": "gulp clean && gulp --env production",
     "build": "gulp build --env production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
