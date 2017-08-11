@@ -11,10 +11,13 @@
 @import "layout/footer.css";
 
 /* object */
+@import "object/component/title.css";
 @import "object/component/links.css";
 @import "object/component/article.css";
+@import "object/component/avatar.css";
 
 @import "object/project/list-article.css";
+@import "object/project/author.css";
 
 @import "object/utility/title.css";
 @import "object/utility/subtitle.css";

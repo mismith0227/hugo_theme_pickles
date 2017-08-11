@@ -1,0 +1,28 @@
+.p-author {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: 80px auto;
+  &::before {
+    content: "* * *";
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #999;
+  }
+  &__avatar {
+    margin-right: 16px;
+  }
+  &__name {
+    font-size: 2.4rem;
+  }
+  &__body {
+    & p {
+      margin: 0;
+    }
+  }
+}

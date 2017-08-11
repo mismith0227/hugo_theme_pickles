@@ -1,8 +1,6 @@
 .c-article {
   &__title {
     font-size: 2.4rem;
-    font-weight: 300;
-    font-family: var(--OpenSans);
     & a {
       color: var(--color-text);
       &:hover {

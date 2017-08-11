@@ -1,22 +1,22 @@
-<aside>
-  <div>
+<aside class="p-author">
+  <div class="c-avatar p-author__avatar">
     {{ with .Site.Params.avatar }}
     <img alt="Author Avatar" src="{{ . }}" />
     {{ end }}
   </div>
-  <div>
+  <div class="p-author__body">
     {{ with .Site.Params.author }}
-    <p>{{ . }}</p>
+    <p class="c-title p-author__name ">{{ . }}</p>
     {{ end }}
     {{ with .Site.Params.bio }}
     <p>{{ . }}</p>
     {{ end }}
+    {{ with .Site.Params.contact }}
+    <p>
+      <a href="{{ . }}">
+        Contact me
+      </a>
+    </p>
+    {{ end }}
   </div>
-  {{ with .Site.Params.contact }}
-  <div>
-    <a href="{{ . }}">
-      Contact me
-    </a>
-  </div>
-  {{ end }}
 </aside>
