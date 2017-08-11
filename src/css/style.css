@@ -1,14 +1,16 @@
-body {
-  background: #fff;
-}
+/* foundation */
+@import "foundation/variable/breakpoint.css";
+@import "foundation/variable/color.css";
+@import "foundation/variable/font-family.css";
+@import "foundation/base/normalize.css";
+@import "foundation/base/base.css";
 
-h1 {
-  & a {
-    color: #333;
-  }
-}
+/* layout */
+@import "layout/header.css";
 
-svg {
-  width: 32px;
-  height: 32px;
-}
+/* object */
+@import "object/component/links.css";
+
+@import "object/project/title.css";
+@import "object/project/subtitle.css";
+@import "object/project/icon.css";

@@ -1,0 +1,19 @@
+body {
+  font-size: 62.5%;
+  font-family: var(--SanFrancisco);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}

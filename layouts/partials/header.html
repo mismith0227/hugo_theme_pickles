@@ -3,14 +3,14 @@
 {{ partial "head.html" . }}
 <body>
   {{ partial "svgpack-sprite.html" . }}
-  <header>
+  <header class="l-header">
     {{ if .IsPage }}
-    <p><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></p>
+    <p class="p-title"><a href="{{ .Site.BaseURL }}" class="p-title__link">{{ .Site.Title }}</a></p>
     {{ else }}
-    <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+    <h1 class="p-title"><a href="{{ .Site.BaseURL }}" class="p-title__link">{{ .Site.Title }}</a></h1>
     {{ end }}
     {{ with .Site.Params.subtitle }}
-    <p>
+    <p class="p-subtitle">
       {{ . }}
     </p>
     {{ end }}
