@@ -7,10 +7,17 @@
 
 /* layout */
 @import "layout/header.css";
+@import "layout/main.css";
+@import "layout/footer.css";
 
 /* object */
 @import "object/component/links.css";
+@import "object/component/article.css";
 
-@import "object/project/title.css";
-@import "object/project/subtitle.css";
-@import "object/project/icon.css";
+@import "object/project/list-article.css";
+
+@import "object/utility/title.css";
+@import "object/utility/subtitle.css";
+@import "object/utility/tag-title.css";
+@import "object/utility/icon.css";
+@import "object/utility/copyright.css";

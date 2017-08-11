@@ -1,11 +1,9 @@
 {{ partial "header.html" . }}
-<div>
-  {{ range $index, $page := .Paginator.Pages }}
-  {{ if ne $index 0 }}
-  {{ end }}
-  {{ .Render "li" }}
-  {{ end }}
-</div>
+{{ range $index, $page := .Paginator.Pages }}
+{{ if ne $index 0 }}
+{{ end }}
+{{ .Render "li" }}
+{{ end }}
 {{ partial "pagination.html" .Paginator }}
 {{ partial "siteinfo.html" . }}
 {{ partial "footer.html" . }}

@@ -1,17 +1,17 @@
-<article>
+<article class="c-article p-list-article">
   <header>
-    <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    <p>
+    <h2 class="c-article__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    <p class="c-article__meta">
       Posted on
       <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
         {{ .Date.Format "Jan 2, 2006" }}
       </time>
     </p>
   </header>
-  <div>
+  <div class="c-article__summary">
     {{ .Summary }}
   </div>
   {{ if .Truncated }}
-  <a href="{{ .Permalink }}">Read more</a></li>
+  <a href="{{ .Permalink }}" class="c-article__btn p-list-article__btn">Read more</a></li>
   {{ end }}
 </article>

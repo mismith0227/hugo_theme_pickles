@@ -1,0 +1,9 @@
+.title {
+  margin: 0;
+  font-size: 4.0rem;
+  &__link {
+    color: var(--color-text);
+    font-weight: 300;
+    font-family: var(--OpenSans);
+  }
+}

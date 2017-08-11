@@ -1,6 +1,8 @@
   </main>
-  <footer>
-    <p>
+  <footer class="l-footer">
+    {{ partial "link.html" . }}
+
+    <p class="copyright">
       {{ if .Site.Params.author }}
         {{ if .Site.Params.authorwebsite }}
           <a href="{{ .Site.Params.authorwebsite }}">{{ .Site.Params.author }}</a>
@@ -17,7 +19,6 @@
         <a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a>
       {{ end }}
     </p>
-    {{ partial "link.html" . }}
   </footer>
 
   {{ with .Site.Params.ga_api_key }}

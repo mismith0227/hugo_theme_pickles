@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 <section>
-  <h2>{{ .Title }}</h2>
+  <h2 class="tag-title">{{ .Title }}</h2>
   {{ range .Data.Pages }}
   {{ .Render "li" }}
   {{ end }}

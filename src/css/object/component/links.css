@@ -2,19 +2,22 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 8px;
+  margin: 8px 0 0;
+  padding: 0;
   & a {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 30px;
     height: 30px;
-    border: 1px solid #ccc;
+    border: 1px solid;
+    border-color: var(--color-text);
     border-radius: 50%;
-    color: #ccc;
+    color: var(--color-text);
   }
   &__item {
-    margin: 16px 8px 0;
+    margin: 8px 8px 0;
+    list-style: none;
   }
   &__icon {
     width: 16px;

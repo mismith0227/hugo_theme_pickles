@@ -1,0 +1,7 @@
+.subtitle {
+  margin: 12px 0 0 0;
+  color: var(--color-text);
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-family: var(--OpenSans);
+}
