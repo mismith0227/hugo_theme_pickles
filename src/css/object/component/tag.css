@@ -1,0 +1,12 @@
+.c-tag {
+  display: inline-block;
+  margin: 4px 6px 0 0;
+  font-size: 1.2rem;
+  color: #555;
+  &::before {
+    content: "#";
+    display: inline-block;
+    margin-right: 2px;
+    color: currentColor;
+  }
+}
