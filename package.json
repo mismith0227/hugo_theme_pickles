@@ -41,5 +41,8 @@
     "svgpack": "^3.1.1",
     "webpack": "^2.2.1",
     "webpack-stream": "^3.2.0"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
   }
 }

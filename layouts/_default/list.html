@@ -1,8 +1,7 @@
 {{ partial "header.html" . }}
-<section>
-  <h2 class="c-title tag-title">{{ .Title }}</h2>
-  {{ range .Data.Pages }}
-  {{ .Render "li" }}
-  {{ end }}
-</section>
+<h2 class="c-title tag-title">{{ .Title }}</h2>
+{{ range .Data.Pages }}
+{{ .Render "li" }}
+{{ end }}
+{{ partial "pagination.html" .Paginator }}
 {{ partial "footer.html" . }}

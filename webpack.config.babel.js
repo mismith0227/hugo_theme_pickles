@@ -28,11 +28,7 @@ export default {
   },
   plugins: [
     new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery'
+      'window.jQuery': 'jquery'
     })
-  ],
-  externals: {
-    jquery: 'window.jQuery'
-  }
+  ]
 }

@@ -29,9 +29,53 @@ $ git clone -b release https://github.com:mismith0227/hugo_theme_pickles.git
 
 Use hugo's -t hugo_theme_pickles or --theme=hugo_theme_pickles option with hugo commands. Example:
 
+## Configuration
+
+You may specify following options in `config.toml` of your site to make use of
+this theme's features.
 
 ```shell
 $ hugo server -t hugo_theme_pickles -w -D
+```
+
+```toml
+baseurl = "Your site URL"
+languageCode = "en-us"
+Title = "Your site title"
+# Copyright notice. This is displayer in the footer.
+copyright = "&copy; Copyright notice"
+
+[params]
+  # Social accounts. Link to these accounts are displayed in the header and
+  # footer
+  twitter = "Your Twitter username"
+  facebook = "Your Facebook username"
+  instagram = "Your Instagram username"
+  googleplus = "Your Google+ user id"
+  github = "Your GitHub username"
+  npm = "Your npm username"
+  codepen = "Your CodePen username"
+  dribbble = "Your Dribbble username"
+  fiftypx = "Your 500px username" # 500px
+  flickr = "Your Flickr username"
+  pinterest = "Your Pinterest username"
+  tumblr = "Your Tumblr username"
+  vimeo = "Your Vimeo username"
+  youtube = "Your YouTube username"
+  linkedin = "Your LinkedIn username"
+  # Disqus shortname
+  disqus = ""
+  # Google Analytics API key.
+  ga_api_key = "Your Google Analytics tracking id"
+  author = "Your Name"
+  authorwebsite = "example.com"
+  avatar = "/path/to/avatar"
+  contact = "Your contact link (ex. mailto:foo@example.com)"
+  bio = "Your short bio"
+  # Short subtitle/tagline. This is displayed in the header.
+  subtitle = "Short subtitle"
+  # Logo image. This is displayed ogp image.
+  logo = "/path/to/logo"
 ```
 
 ## Development

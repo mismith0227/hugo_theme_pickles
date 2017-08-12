@@ -1,0 +1,17 @@
+.c-pagination {
+  margin: 40px 0;
+  font-size: 1.4rem;
+  & a {
+    display: inline-block;
+    margin: 0 24px;
+  }
+  &__ctrl {
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__count {
+    display: block;
+    text-align: center;
+  }
+}

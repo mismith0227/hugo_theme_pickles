@@ -1,12 +1,11 @@
-<nav>
-{{ if or .HasPrev .HasNext }}
-  <hr />
-{{ end }}
-{{if .HasPrev}}
-<a href="{{ .Prev.URL }}"><span aria-hidden="true">&laquo;</span> Newer Posts</a>
-{{end}}
-  <span>Page {{ .PageNumber }} of {{.TotalPages}}</span>
-{{if .HasNext}}
-<a href="{{ .Next.URL }}">Older Posts <span aria-hidden="true">&raquo;</span></a>
-{{end}}
+<nav class="c-pagination">
+  <div class="c-pagination__ctrl">
+    {{if .HasPrev}}
+    <a href="{{ .Prev.URL }}">Newer</a>
+    {{end}}
+    {{if .HasNext}}
+    <a href="{{ .Next.URL }}">Older</a>
+    {{end}}
+  </div>
+  <span class="c-pagination__count">Page {{ .PageNumber }} of {{.TotalPages}}</span>
 </nav>

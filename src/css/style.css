@@ -2,6 +2,7 @@
 @import "foundation/variable/breakpoint.css";
 @import "foundation/variable/color.css";
 @import "foundation/variable/font-family.css";
+@import "foundation/lib/zoom.css";
 @import "foundation/base/normalize.css";
 @import "foundation/base/base.css";
 
@@ -17,6 +18,7 @@
 @import "object/component/avatar.css";
 @import "object/component/time.css";
 @import "object/component/tag.css";
+@import "object/component/pagination.css";
 
 @import "object/project/list-article.css";
 @import "object/project/author.css";
