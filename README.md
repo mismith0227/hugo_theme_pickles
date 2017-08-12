@@ -29,14 +29,14 @@ $ git clone -b release https://github.com:mismith0227/hugo_theme_pickles.git
 
 Use hugo's -t hugo_theme_pickles or --theme=hugo_theme_pickles option with hugo commands. Example:
 
+```shell
+$ hugo server -t hugo_theme_pickles -w -D
+```
+
 ## Configuration
 
 You may specify following options in `config.toml` of your site to make use of
 this theme's features.
-
-```shell
-$ hugo server -t hugo_theme_pickles -w -D
-```
 
 ```toml
 baseurl = "Your site URL"
