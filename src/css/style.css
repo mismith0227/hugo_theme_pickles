@@ -2,7 +2,6 @@
 @import "foundation/variable/breakpoint.css";
 @import "foundation/variable/color.css";
 @import "foundation/variable/font-family.css";
-@import "foundation/lib/zoom.css";
 @import "foundation/base/normalize.css";
 @import "foundation/base/base.css";
 
@@ -22,6 +21,7 @@
 
 @import "object/project/list-article.css";
 @import "object/project/author.css";
+@import "object/project/pagination.css";
 
 @import "object/utility/title.css";
 @import "object/utility/subtitle.css";

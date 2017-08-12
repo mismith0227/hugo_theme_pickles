@@ -1,0 +1,6 @@
+.p-pagination {
+  margin: 60px 0;
+  &__count {
+    margin-top: 24px;
+  }
+}
