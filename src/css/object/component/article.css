@@ -9,7 +9,7 @@
     }
   }
   &__meta {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     line-height: 1;
   }
   &__summary {
@@ -23,7 +23,7 @@
   &__btn {
     display: inline-block;
     padding-bottom: 4px;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     &::after {
       content: "";
       display: inline-block;
