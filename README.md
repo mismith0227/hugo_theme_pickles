@@ -105,10 +105,6 @@ copyright = "&copy; Copyright notice"
         // Build
         $ yarn run build
 
-## Version
-
-2.0
-
 ## License
 
 Open sourced under the MIT license.
