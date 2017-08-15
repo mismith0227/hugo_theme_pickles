@@ -1,6 +1,7 @@
 .c-tag {
   display: inline-block;
-  margin: 4px 6px 0 0;
+  margin: 8px 6px 0 0;
+  padding: 4px;
   font-size: 1.2rem;
   color: #555;
   &::before {
@@ -8,5 +9,8 @@
     display: inline-block;
     margin-right: 2px;
     color: currentColor;
+  }
+  &:hover {
+    background: #fafafa;
   }
 }

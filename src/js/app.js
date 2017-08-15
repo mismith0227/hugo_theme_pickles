@@ -3,5 +3,5 @@ require('zoom.js')
 require('./zoom/transition.js')
 
 $(() => {
-  $('img').attr('data-action', 'zoom')
+  $('#js-article img').attr('data-action', 'zoom')
 })

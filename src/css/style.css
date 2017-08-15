@@ -23,6 +23,7 @@
 @import "object/project/list-article.css";
 @import "object/project/author.css";
 @import "object/project/pagination.css";
+@import "object/project/article.css";
 
 @import "object/utility/title.css";
 @import "object/utility/subtitle.css";
