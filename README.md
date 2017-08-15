@@ -28,7 +28,7 @@ In your hugo site directory, run:
 ```shell
 $ mkdir themes
 $ cd themes
-$ git clone -b release https://github.com:mismith0227/hugo_theme_pickles.git
+$ git clone -b release https://github.com/mismith0227/hugo_theme_pickles
 ```
 
 ## Usage
