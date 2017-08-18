@@ -1,3 +1,4 @@
+{{ if or ( .Site.Params.twitter ) ( .Site.Params.facebook ) ( .Site.Params.instagram ) ( .Site.Params.googleplus ) ( .Site.Params.github ) ( .Site.Params.npm ) ( .Site.Params.codepen ) ( .Site.Params.dribbble ) ( .Site.Params.fivehundredpx ) ( .Site.Params.flickr ) ( .Site.Params.pinterest ) ( .Site.Params.tumblr ) ( .Site.Params.vimeo ) ( .Site.Params.youtube ) ( .Site.Params.linkedin ) }}
 <ul class="c-links">
   {{ with .Site.Params.twitter }}
   <li class="c-links__item">
@@ -150,3 +151,4 @@
   </li>
   {{ end }}
 </ul>
+{{ end }}

@@ -1,0 +1,17 @@
+{{ if .Site.Menus.main }}
+<nav class="l-nav p-menu">
+  <ul class="p-menu__lists">
+    {{ range .Site.Menus.main }}
+    <li class="p-menu__list">
+      <a href='{{ .URL }}'
+        {{ if or ( $.IsMenuCurrent "main" . ) ( $.HasMenuCurrent "main" . ) }}
+           class='current' aria-current='page'
+        {{ end }}
+      >
+        {{- .Name -}}
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</nav>
+{{ end }}

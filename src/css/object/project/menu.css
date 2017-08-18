@@ -1,0 +1,18 @@
+.p-menu {
+  &__lists {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+  &__list {
+    margin: 8px 16px 0 0;
+    list-style: none;
+    & a {
+      padding-bottom: 4px;
+      &:hover {
+        border-bottom: 1px solid currentColor;
+      }
+    }
+  }
+}

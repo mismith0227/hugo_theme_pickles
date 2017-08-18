@@ -8,6 +8,7 @@
 
 /* layout */
 @import "layout/header.css";
+@import "layout/nav.css";
 @import "layout/main.css";
 @import "layout/footer.css";
 
@@ -21,12 +22,13 @@
 @import "object/component/pagination.css";
 
 @import "object/project/list-article.css";
+@import "object/project/menu.css";
 @import "object/project/author.css";
 @import "object/project/pagination.css";
 @import "object/project/article.css";
+@import "object/project/notfound.css";
 
 @import "object/utility/title.css";
 @import "object/utility/subtitle.css";
 @import "object/utility/tag-title.css";
-@import "object/utility/icon.css";
 @import "object/utility/copyright.css";

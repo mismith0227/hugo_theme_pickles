@@ -14,6 +14,11 @@
     border-color: var(--color-text);
     border-radius: 50%;
     color: var(--color-text);
+    transition: .2s;
+    &:hover {
+      background: var(--color-text);
+      color: #fff;
+    }
   }
   &__item {
     margin: 8px 8px 0;

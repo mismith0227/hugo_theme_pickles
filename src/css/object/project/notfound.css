@@ -1,0 +1,10 @@
+.p-notfound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  & h1 {
+    font-size: 10rem;
+    font-weight: bold;
+  }
+}
