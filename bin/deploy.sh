@@ -29,7 +29,8 @@ svgpack
 tmp
 src
 config.toml
-yarn.lock" > .gitignore
+yarn.lock
+exampleSite" > .gitignore
 
 git init
 git config user.name "Travis CI"

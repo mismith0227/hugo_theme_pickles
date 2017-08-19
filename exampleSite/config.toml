@@ -1,0 +1,12 @@
+baseurl = "http://hugo.spf13.com/"
+title = "Hugo Themes"
+author = "Steve Francia"
+copyright = "Copyright (c) 2008 - 2014, Steve Francia; all rights reserved."
+canonifyurls = true
+paginate = 3
+
+[params]
+  # Social accounts. Link to these accounts are displayed in the header and
+  # footer
+  github = "gohugoio"
+  author = "Steve Francia"

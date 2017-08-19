@@ -1,0 +1,36 @@
+baseurl = "https://pickles.work/"
+languageCode = "en-us"
+Title = "Pickles"
+# Copyright notice. This is displayer in the footer.
+copyright = "&copy; Copyright notice"
+
+[params]
+  # Social accounts. Link to these accounts are displayed in the header and
+  # footer
+  twitter = "misumi_takuma"
+  facebook = ""
+  instagram = ""
+  googleplus = ""
+  github = ""
+  npm = ""
+  codepen = ""
+  dribbble = ""
+  fiftypx = "" # 500px
+  flickr = ""
+  pinterest = ""
+  tumblr = ""
+  vimeo = ""
+  youtube = ""
+  linkedin = ""
+  # Disqus shortname
+  disqus = ""
+  # Google Analytics API key.
+  ga_api_key = ""
+  author = "Misumi Takuma"
+  authorwebsite = ""
+  avatar = "https://pbs.twimg.com/profile_images/898002863288328192/ybfJXcFa_400x400.jpg"
+  contact = ""
+  bio = "あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ"
+  # Short subtitle/tagline. This is displayed in the header.
+  subtitle = ""
+  logo = "https://knp-honmachi.net//media/uoshige/uoshige3.jpg"
