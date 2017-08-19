@@ -18,6 +18,7 @@ echo ".bowerrc
 .travis.yml
 .gitignore
 .babelrc
+./images
 webpack.config.babel.js
 bin
 gulpfile.babel.js
@@ -30,8 +31,7 @@ tmp
 src
 config.toml
 yarn.lock
-exampleSite
-./images" > .gitignore
+exampleSite" > .gitignore
 
 git init
 git config user.name "Travis CI"
