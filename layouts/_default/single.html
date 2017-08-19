@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 {{ $baseurl := .Site.BaseURL }}
-<article id="js-article" class="p-article">
+<article class="p-article">
   <header>
     <h1>{{ .Title }}</h1>
     <div>
@@ -15,7 +15,7 @@
       {{ end }}
     </div>
   </header>
-  <section class="p-article__body">
+  <section id="js-article" class="p-article__body">
     {{ .Content }}
   </section>
   <footer>
