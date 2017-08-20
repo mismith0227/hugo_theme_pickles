@@ -2,4 +2,5 @@
 /content
 /svgpack
 yarn-error.log
-./config.toml
+config.toml
+!/exampleSite/config.toml
