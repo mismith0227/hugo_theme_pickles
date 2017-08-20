@@ -2,20 +2,24 @@
   display: block;
   position: relative;
   width: 100%;
-  margin: 80px auto 0;
+  margin: 20px auto 0;
   @media (--sm) {
     display: flex;
+    margin: 80px auto 0;
   }
   &::before {
     content: "* * *";
     position: absolute;
-    top: -50px;
+    top: -30px;
     left: 0;
     right: 0;
     margin: auto;
     text-align: center;
     font-size: 1.4rem;
     color: #999;
+    @media (--sm) {
+      top: -50px;
+    }
   }
   &__avatar {
   }
@@ -24,7 +28,9 @@
   }
   &__body {
     flex: 1;
-    padding-left: 16px;
+    @media (--sm) {
+      padding-left: 16px;
+    }
     & p {
       margin: 0;
     }

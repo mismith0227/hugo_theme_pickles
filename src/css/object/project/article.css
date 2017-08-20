@@ -1,6 +1,10 @@
 .p-article {
   &__body {
-    margin: 40px 0 60px;
+    margin: 40px 0 30px;
+    word-wrap: break-word;
+    @media (--sm) {
+      margin: 40px 0 60px;
+    }
     & img {
       &:hover {
         cursor: zoom-in;

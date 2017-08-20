@@ -1,5 +1,8 @@
 .p-pagination {
-  margin: 60px 0;
+  margin: 30px 0;
+  @media (--sm) {
+    margin: 60px 0;
+  }
   &__count {
     margin-top: 24px;
   }

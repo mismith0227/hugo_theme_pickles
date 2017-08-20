@@ -2,6 +2,8 @@
 
 Pickles is a modern, simple and beautiful Hugo theme.
 
+![screenshot](https://github.com/mismith0227/hugo_theme_pickles/blob/master/images/screenshot.png)
+
 ## Overview
 
 * Modern, Simple and beautiful design
@@ -30,6 +32,10 @@ $ mkdir themes
 $ cd themes
 $ git clone -b release https://github.com/mismith0227/hugo_theme_pickles
 ```
+
+Or download it from the release branch
+
+[release](https://github.com/mismith0227/hugo_theme_pickles/tree/release)
 
 ## Usage
 
