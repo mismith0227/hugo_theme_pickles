@@ -1,12 +1,37 @@
-baseurl = "http://hugo.spf13.com/"
-title = "Hugo Themes"
-author = "Steve Francia"
-copyright = "Copyright (c) 2008 - 2014, Steve Francia; all rights reserved."
-canonifyurls = true
-paginate = 3
+baseurl = "Your site URL"
+languageCode = "en-us"
+Title = "Your site title"
+# Copyright notice. This is displayer in the footer.
+copyright = "&copy; Copyright notice"
 
 [params]
   # Social accounts. Link to these accounts are displayed in the header and
   # footer
-  github = "gohugoio"
-  author = "Steve Francia"
+  twitter = "Your Twitter username"
+  facebook = "Your Facebook username"
+  instagram = "Your Instagram username"
+  googleplus = "Your Google+ user id"
+  github = "Your GitHub username"
+  npm = "Your npm username"
+  codepen = "Your CodePen username"
+  dribbble = "Your Dribbble username"
+  fivehundredpx = "Your 500px username" # 500px
+  flickr = "Your Flickr username"
+  pinterest = "Your Pinterest username"
+  tumblr = "Your Tumblr username"
+  vimeo = "Your Vimeo username"
+  youtube = "Your YouTube username"
+  linkedin = "Your LinkedIn username"
+  # Disqus shortname
+  disqus = ""
+  # Google Analytics API key.
+  ga_api_key = "Your Google Analytics tracking id"
+  author = "Your Name"
+  authorwebsite = "example.com"
+  avatar = "/path/to/avatar"
+  contact = "Your contact link (ex. mailto:foo@example.com)"
+  bio = "Your short bio"
+  # Short subtitle/tagline. This is displayed in the header.
+  subtitle = "Short subtitle"
+  # Logo image. This is displayed ogp image.
+  logo = "/path/to/logo"
