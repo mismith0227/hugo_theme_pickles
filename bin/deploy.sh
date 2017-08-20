@@ -31,6 +31,7 @@ tmp
 src
 config.toml
 yarn.lock
+!/exampleSite/config.toml
 !/exampleSite/content" > .gitignore
 
 git init
