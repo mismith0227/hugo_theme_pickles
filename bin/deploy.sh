@@ -32,7 +32,8 @@ src
 config.toml
 yarn.lock
 !/exampleSite/config.toml
-!/exampleSite/content" > .gitignore
+!/exampleSite/content
+!/exampleSite/static" > .gitignore
 
 git init
 git config user.name "Travis CI"
