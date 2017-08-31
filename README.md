@@ -50,6 +50,8 @@ $ hugo server -t hugo_theme_pickles -w -D
 You may specify following options in `config.toml` of your site to make use of
 this theme's features.
 
+Please see the sample config.toml under the exampleSite directory.
+
 ```toml
 baseurl = "Your site URL"
 languageCode = "en-us"
@@ -91,6 +93,12 @@ copyright = "&copy; Copyright notice"
   logo = "/path/to/logo"
   favicon = "/path/to/logo"
 ```
+
+## Contributing
+
+Pull requests, bug fixes and new features are welcome!
+
+Please create feature branches from [develop](https://github.com/mismith0227/hugo_theme_pickles/tree/develop) and submit a PR for any change.
 
 ## Development
 
