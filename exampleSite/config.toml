@@ -5,6 +5,7 @@ Title = "Your site title"
 copyright = "&copy; Copyright notice"
 
 [params]
+  paginate = 10
   # Social accounts. Link to these accounts are displayed in the header and
   # footer
   twitter = "Your Twitter username"
