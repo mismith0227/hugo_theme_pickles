@@ -89,6 +89,7 @@ copyright = "&copy; Copyright notice"
   subtitle = "Short subtitle"
   # Logo image. This is displayed ogp image.
   logo = "/path/to/logo"
+  favicon = "/path/to/logo"
 ```
 
 ## Development
