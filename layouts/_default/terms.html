@@ -5,7 +5,7 @@
   <ul>
     {{ $data := .Data }}
     {{ range $key, $value := .Data.Terms }}
-    <li><a href="{{ $baseurl }}/{{ $data.Plural }}/{{ $key | urlize }}">{{ $key }}</a> {{ len $value }}</li>
+    <li><a href="{{ $baseurl }}/{{ $data.Plural }}/{{ $key | urlize }}">{{ $key }}</a> ({{ len $value }})</li>
     {{ end }}
   </ul>
 </section>
