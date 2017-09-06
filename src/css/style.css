@@ -21,14 +21,17 @@
 @import "object/component/tag.css";
 @import "object/component/pagination.css";
 
+@import "object/project/title.css";
+@import "object/project/subtitle.css";
+@import "object/project/tag-title.css";
+@import "object/project/copyright.css";
 @import "object/project/list-article.css";
 @import "object/project/menu.css";
 @import "object/project/author.css";
 @import "object/project/pagination.css";
 @import "object/project/article.css";
 @import "object/project/notfound.css";
+@import "object/project/screen-reader-text.css";
 
-@import "object/utility/title.css";
-@import "object/utility/subtitle.css";
-@import "object/utility/tag-title.css";
-@import "object/utility/copyright.css";
+@import "object/utility/display.css";
+@import "object/utility/align.css";
