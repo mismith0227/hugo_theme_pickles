@@ -50,7 +50,7 @@ $ hugo server -t hugo_theme_pickles -w -D
 You may specify following options in `config.toml` of your site to make use of
 this theme's features.
 
-For getting started with Pickles, copy the config.toml file from the exampleSite directory inside Pickles’s repository to your site repository.
+For getting started with Pickles, copy the [config.toml](https://github.com/mismith0227/hugo_theme_pickles/blob/master/exampleSite/config.toml) file from the exampleSite directory inside Pickles’s repository to your site repository.
 
 ```shell
 $ cp themes/hugo_theme_pickles/exampleSite/config.toml .
