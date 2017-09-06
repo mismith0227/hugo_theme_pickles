@@ -50,49 +50,13 @@ $ hugo server -t hugo_theme_pickles -w -D
 You may specify following options in `config.toml` of your site to make use of
 this theme's features.
 
-Please see the sample config.toml under the exampleSite directory.
+For getting started with Pickles, copy the config.toml file from the exampleSite directory inside Pickles’s repository to your site repository.
 
-```toml
-baseurl = "Your site URL"
-languageCode = "en-us"
-Title = "Your site title"
-# Copyright notice. This is displayer in the footer.
-copyright = "&copy; Copyright notice"
-
-[params]
-  paginate = 10
-  # Social accounts. Link to these accounts are displayed in the header and
-  # footer
-  twitter = "Your Twitter username"
-  facebook = "Your Facebook username"
-  instagram = "Your Instagram username"
-  googleplus = "Your Google+ user id"
-  github = "Your GitHub username"
-  npm = "Your npm username"
-  codepen = "Your CodePen username"
-  dribbble = "Your Dribbble username"
-  fivehundredpx = "Your 500px username" # 500px
-  flickr = "Your Flickr username"
-  pinterest = "Your Pinterest username"
-  tumblr = "Your Tumblr username"
-  vimeo = "Your Vimeo username"
-  youtube = "Your YouTube username"
-  linkedin = "Your LinkedIn username"
-  # Disqus shortname
-  disqus = ""
-  # Google Analytics API key.
-  ga_api_key = "Your Google Analytics tracking id"
-  author = "Your Name"
-  authorwebsite = "example.com"
-  avatar = "/path/to/avatar"
-  contact = "Your contact link (ex. mailto:foo@example.com)"
-  bio = "Your short bio"
-  # Short subtitle/tagline. This is displayed in the header.
-  subtitle = "Short subtitle"
-  # Logo image. This is displayed ogp image.
-  logo = "/path/to/logo"
-  favicon = "/path/to/favicon"
+```shell
+$ cp themes/hugo_theme_pickles/exampleSite/config.toml .
 ```
+
+Now, you can start editing this file and add your own information!
 
 ## Contributing
 
