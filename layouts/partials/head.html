@@ -17,7 +17,7 @@
   <meta property="og:site_name" content="{{ .Site.Title }}" />
   <meta property="og:url" content="{{ .Permalink }}" />
 
-  {{ with .Params.share_img | default .Site.Params.logo }}
+  {{ with .Params.thumbnail }}
   <meta property="og:image" content="{{ . | absURL }}" />
   <meta name="twitter:image" content="{{ . | absURL }}" />
   {{ end }}
