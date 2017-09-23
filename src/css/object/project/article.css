@@ -1,4 +1,7 @@
 .p-article {
+  &__thumbnail {
+    margin-top: 24px;
+  }
   &__body {
     margin: 40px 0 30px;
     word-wrap: break-word;
