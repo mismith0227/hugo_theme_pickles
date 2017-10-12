@@ -8,7 +8,7 @@
     @media (--sm) {
       margin: 40px 0 60px;
     }
-    & img {
+    & img[data-action^="zoom"] {
       &:hover {
         cursor: zoom-in;
       }

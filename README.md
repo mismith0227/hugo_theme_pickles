@@ -14,6 +14,12 @@ Pickles is a modern, simple and beautiful Hugo theme.
 * Responsive design
 * SVG Sprite
 
+Use short code for Image Zoom.
+
+```
+{{% zoom-img src="/images/default.jpg" %}}
+```
+
 ## Features
 
 * gulp
