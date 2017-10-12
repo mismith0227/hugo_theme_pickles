@@ -4,20 +4,23 @@
     {{ partial "link.html" . }}
 
     <p class="p-copyright">
-      {{ if .Site.Params.author }}
-        {{ if .Site.Params.authorwebsite }}
-          <a href="{{ .Site.Params.authorwebsite }}">{{ .Site.Params.author }}</a>
-        {{ else }}
-          {{ .Site.Params.author }}
+      {{ with .Site.Copyright | safeHTML }}
+        {{ . }}
+      {{ else }}
+        {{ if .Site.Params.author }}
+          {{ if .Site.Params.authorwebsite }}
+            <a href="{{ .Site.Params.authorwebsite }}">{{ .Site.Params.author }}</a>
+          {{ else }}
+            {{ .Site.Params.author }}
+          {{ end }}
         {{ end }}
-      {{ end }}
-
-      &nbsp;&bull;&nbsp;
-      {{ .Site.LastChange.Format "2006" }}
-
-      {{ if .Site.Title }}
         &nbsp;&bull;&nbsp;
-        <a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a>
+        {{ .Site.LastChange.Format "2006" }}
+
+        {{ if .Site.Title }}
+          &nbsp;&bull;&nbsp;
+          <a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a>
+        {{ end }}
       {{ end }}
     </p>
   </footer>
