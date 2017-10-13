@@ -37,3 +37,35 @@ copyright = "&copy; Copyright notice"
   # Logo image. This is displayed ogp image.
   logo = "/path/to/logo"
   favicon = "/path/to/favicon"
+
+[[menu.main]]
+    name = "Blog"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "About"
+    url = "/about"
+    weight = 2
+
+[[menu.main]]
+    identifier = "theme"
+    name = "theme"
+    weight = 3
+
+[[menu.main]]
+    parent = "theme"
+    name = "creating-a-new-theme"
+    url = "/posts/creating-a-new-theme"
+    weight = 1
+
+[[menu.main]]
+    parent = "theme"
+    name = "migrate-from-jekyll"
+    url = "/posts/migrate-from-jekyll"
+    weight = 2
+
+[[menu.main]]
+    name = "Tags"
+    url = "tags"
+    weight = 4
