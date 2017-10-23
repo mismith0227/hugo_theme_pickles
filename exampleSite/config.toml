@@ -13,6 +13,7 @@ copyright = "&copy; Copyright notice"
   instagram = "Your Instagram username"
   googleplus = "Your Google+ account URL" # https://plus.google.com/u/0/xxxxxx
   github = "Your GitHub username"
+  gitlab = "Your GitLab username"
   npm = "Your npm username"
   codepen = "Your CodePen username"
   dribbble = "Your Dribbble username"
