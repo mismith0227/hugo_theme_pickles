@@ -51,7 +51,7 @@ copyright = "&copy; Copyright notice"
 
 [[menu.main]]
     identifier = "theme"
-    name = "theme"
+    name = "/theme"
     weight = 3
 
 [[menu.main]]
@@ -68,5 +68,5 @@ copyright = "&copy; Copyright notice"
 
 [[menu.main]]
     name = "Tags"
-    url = "tags"
+    url = "/tags"
     weight = 4
