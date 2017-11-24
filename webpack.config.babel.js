@@ -16,8 +16,8 @@ export default {
       {
         enforce: 'pre',
         test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'standard-loader'
+        use: 'standard-loader',
+        exclude: /node_modules/
       },
       {
         test: /\.js$/,
