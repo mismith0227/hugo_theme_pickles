@@ -32,6 +32,7 @@
 @import "object/project/article.css";
 @import "object/project/notfound.css";
 @import "object/project/screen-reader-text.css";
+@import "object/project/related.css";
 
 @import "object/utility/display.css";
 @import "object/utility/align.css";

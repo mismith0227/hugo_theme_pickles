@@ -3,4 +3,5 @@
 /svgpack
 yarn-error.log
 config.toml
+npm-debug.log
 !/exampleSite/config.toml
