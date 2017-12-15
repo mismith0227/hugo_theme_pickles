@@ -45,6 +45,7 @@
   },
   "dependencies": {
     "jquery": "^3.2.1",
+    "slick-carousel": "^1.8.1",
     "zoom.js": "https://github.com/fat/zoom.js/"
   }
 }

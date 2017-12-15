@@ -3,6 +3,8 @@
 @import "foundation/variable/color.css";
 @import "foundation/variable/font-family.css";
 @import "foundation/lib/zoom.css";
+@import "foundation/lib/slick.css";
+@import "foundation/lib/slick-custom.css";
 @import "foundation/base/normalize.css";
 @import "foundation/base/base.css";
 

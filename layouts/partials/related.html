@@ -2,9 +2,9 @@
 {{ with $related }}
 <section class="p-related">
   <h3>See Also</h3>
-  <ul class="p-related__list">
+  <ul id="slider" class="p-related__list">
     {{ range . }}
-    <li class="p-related__item">
+    <li class="p-related__item js-related__item">
       <a href="{{ .RelPermalink }}"
         {{ with .Params.thumbnail }}
           style="background-image: url({{ $.Site.BaseURL }}{{ . }});"

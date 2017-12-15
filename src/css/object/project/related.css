@@ -8,8 +8,8 @@
     display: inline-block;
     width: 230px;
     height: 150px;
-    list-style: none;
     margin-right: 15px;
+    list-style: none;
     &:nth-child(3n) {
       margin-right: 0;
     }
