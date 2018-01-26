@@ -1,5 +1,5 @@
 {{ partial "header.html" . }}
-{{ $baseurl := .Site.BaseURL }}
+{{ $baseurl := .Site.BaseURL | sanitizeurl }}
 <article class="p-article">
   <header>
     <h1>{{ .Title }}</h1>
@@ -11,7 +11,7 @@
         </time>
       </div>
       {{ range .Params.tags }}
-      <a href="{{ $baseurl }}tags/{{ . | urlize }}" class="c-tag">{{ . }}</a>
+      <a href="{{ $baseurl }}/tags/{{ . | urlize }}" class="c-tag">{{ . }}</a>
       {{ end }}
     </div>
   </header>
