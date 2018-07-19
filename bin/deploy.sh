@@ -31,6 +31,7 @@ tmp
 src
 config.toml
 yarn.lock
+renovate.json
 !/exampleSite/config.toml
 !/exampleSite/content
 !/exampleSite/static" > .gitignore
