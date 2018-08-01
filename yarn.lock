@@ -4515,11 +4515,11 @@ postcss-load-plugins@^2.3.0:
     cosmiconfig "^2.1.1"
     object-assign "^4.1.0"
 
-postcss-nesting@2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/postcss-nesting/-/postcss-nesting-2.3.1.tgz#94a6b6a4ef707fbec20a87fee5c957759b4e01cf"
+postcss-nesting@6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/postcss-nesting/-/postcss-nesting-6.0.0.tgz#4c45276a065765ec063efe1e4daf75c131518991"
   dependencies:
-    postcss "^5.0.19"
+    postcss "^6.0.22"
 
 postcss-reporter@3.0.0:
   version "3.0.0"
@@ -4534,7 +4534,7 @@ postcss-value-parser@^3.2.3:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-3.3.0.tgz#87f38f9f18f774a4ab4c8a232f5c5ce8872a9d15"
 
-postcss@^5.0.0, postcss@^5.0.14, postcss@^5.0.19, postcss@^5.0.4, postcss@^5.2.0, postcss@^5.2.12:
+postcss@^5.0.0, postcss@^5.0.14, postcss@^5.0.4, postcss@^5.2.0, postcss@^5.2.12:
   version "5.2.17"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-5.2.17.tgz#cf4f597b864d65c8a492b2eabe9d706c879c388b"
   dependencies:
@@ -4542,6 +4542,14 @@ postcss@^5.0.0, postcss@^5.0.14, postcss@^5.0.19, postcss@^5.0.4, postcss@^5.2.0
     js-base64 "^2.1.9"
     source-map "^0.5.6"
     supports-color "^3.2.3"
+
+postcss@^6.0.22:
+  version "6.0.23"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.23.tgz#61c82cc328ac60e677645f979054eb98bc0e3324"
+  dependencies:
+    chalk "^2.4.1"
+    source-map "^0.6.1"
+    supports-color "^5.4.0"
 
 postcss@^7.0.0, postcss@^7.0.2:
   version "7.0.2"
