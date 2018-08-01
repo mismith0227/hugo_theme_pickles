@@ -1422,13 +1422,13 @@ csso@~2.3.1:
     clap "^1.0.9"
     source-map "^0.5.3"
 
-csswring@5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/csswring/-/csswring-5.1.1.tgz#f412b794d87c272f2487e42c05b1b857004f40a9"
+csswring@7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/csswring/-/csswring-7.0.0.tgz#a5873f727ecedbb33900a864ee5d8ea7413333e8"
   dependencies:
-    minimist "^1.1.0"
-    onecolor "^3.0.4"
-    postcss "^5.0.0"
+    minimist "^1.2.0"
+    onecolor "^3.0.5"
+    postcss "^7.0.0"
 
 currently-unhandled@^0.4.1:
   version "0.4.1"
@@ -4159,9 +4159,9 @@ once@~1.3.0:
   dependencies:
     wrappy "1"
 
-onecolor@^3.0.4:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/onecolor/-/onecolor-3.0.4.tgz#75a46f80da6c7aaa5b4daae17a47198bd9652494"
+onecolor@^3.0.5:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/onecolor/-/onecolor-3.0.5.tgz#36eff32201379efdf1180fb445e51a8e2425f9f6"
 
 onetime@^1.0.0:
   version "1.1.0"
