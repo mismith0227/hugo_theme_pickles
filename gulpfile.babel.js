@@ -30,11 +30,6 @@ gulp.task('css', () => {
 // webpack
 // =====================================================
 gulp.task('webpack', () => {
-  if (config.envProduction) {
-    webpackConfig.plugins.push(new webpack.optimize.UglifyJsPlugin())
-  } else {
-    webpackConfig.devtool = 'source-map'
-  }
   return gulp
     .src(config.tasks.webpack.src)
     .pipe(plumber())
