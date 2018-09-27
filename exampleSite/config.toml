@@ -3,6 +3,7 @@ languageCode = "en-us"
 Title = "Your site title"
 # Copyright notice. This is displayer in the footer.
 copyright = "&copy; Copyright notice"
+custom_css = "/static/css/custom.css"
 
 [params]
   paginate = 10
