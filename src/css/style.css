@@ -8,6 +8,9 @@
 @import "foundation/base/normalize.css";
 @import "foundation/base/base.css";
 
+/* fonts */
+@import "fonts/opensans.css";
+
 /* layout */
 @import "layout/header.css";
 @import "layout/nav.css";

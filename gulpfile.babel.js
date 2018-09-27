@@ -46,6 +46,15 @@ gulp.task('image', () => {
     .pipe(gulp.dest(config.tasks.images.dest))
 })
 
+// Font
+// =====================================================
+gulp.task('font', () => {
+  return gulp
+    .src(config.tasks.fonts.src)
+    .pipe(image())
+    .pipe(gulp.dest(config.tasks.fonts.dest))
+})
+
 // SVG
 // =====================================================
 gulp.task('svg', () => {
@@ -88,6 +97,7 @@ gulp.task('default', (cb) => {
     'css',
     'webpack',
     'image',
+    'font',
     'watch',
     'svg:rename',
     cb
