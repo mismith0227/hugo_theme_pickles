@@ -33,7 +33,7 @@
     "postcss-custom-media": "5.0.1",
     "postcss-custom-properties": "5.0.2",
     "postcss-flexbugs-fixes": "4.1.0",
-    "postcss-import": "9.1.0",
+    "postcss-import": "12.0.1",
     "postcss-nesting": "2.3.1",
     "postcss-reporter": "3.0.0",
     "run-sequence": "2.2.1",
