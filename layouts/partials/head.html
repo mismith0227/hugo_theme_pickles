@@ -36,8 +36,8 @@
   {{ else }}
   <meta property="og:type" content="website" />
   {{ end }}
-  <!-- Hugo Version number -->
-  {{ .Hugo.Generator -}}
+  <!-- Hugo Version Number -->
+  {{ hugo.Generator -}}
   
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css" />
   <!-- Custom css files as define in config.toml -->
@@ -47,8 +47,10 @@
   {{- with .Site.Params.favicon }}
   <link rel='icon' type='image/x-icon' href="{{ . | absURL }}" />
   {{- end -}}
-  {{ if eq .URL "/" }}
-  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  {{ if eq .RelPermalink "/" }}
+  {{ with .OutputFormats.Get "RSS" -}}
+  <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+  {{ end -}}
   {{ end }}
   <script type="text/javascript" src="{{ .Site.BaseURL }}js/bundle.js"></script>
   {{ partial "head_custom.html" . }}
