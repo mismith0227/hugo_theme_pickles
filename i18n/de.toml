@@ -1,0 +1,17 @@
+[dateFormat]
+other = "02.01.2006"
+
+[postedOn]
+other = "Gepostet am"
+
+[newer]
+other = "Neuer"
+
+[older]
+other = "Älter"
+
+[readMore]
+other = "Mehr"
+
+[siteOf]
+other = "Seite {{ .PageNumber }} von {{.TotalPages}}"

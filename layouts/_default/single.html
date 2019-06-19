@@ -5,9 +5,9 @@
     <h1>{{ .Title }}</h1>
     <div>
       <div class="c-time">
-        Posted on
+        {{ i18n "postedOn" }}
         <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
-          {{ .Date.Format "Jan 2, 2006" }}
+          {{ .Date.Format (i18n "dateFormat") }}
         </time>
       </div>
       {{ range .Params.tags }}
@@ -40,26 +40,26 @@
         {{ if (eq .Site.Params.SortByWeight "desc") }}
           <div class="c-pagination__newer">
             {{ if .PrevPage }}
-            <a href="{{ .PrevPage.Permalink }}">Newer</a>
+            <a href="{{ .PrevPage.Permalink }}">{{ i18n "newer" }}</a>
             {{ else }}
             {{ end }}
           </div>
           <div class="c-pagination__older">
             {{ if .NextPage }}
-            <a href="{{ .NextPage.Permalink }}">Older</a>
+            <a href="{{ .NextPage.Permalink }}">{{ i18n "older" }}</a>
             {{ else }}
             {{ end }}
           </div>
         {{ else }}
         <div class="c-pagination__newer">
           {{ if .NextPage }}
-          <a href="{{ .NextPage.Permalink }}">Newer</a>
+          <a href="{{ .NextPage.Permalink }}">{{ i18n "newer" }}</a>
           {{ else }}
           {{ end }}
         </div>
         <div class="c-pagination__older">
           {{ if .PrevPage }}
-          <a href="{{ .PrevPage.Permalink }}">Older</a>
+          <a href="{{ .PrevPage.Permalink }}">{{ i18n "older" }}</a>
           {{ else }}
           {{ end }}
         </div>

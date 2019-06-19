@@ -2,9 +2,9 @@
   <header>
     <h2 class="c-title c-article__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     <p class="c-article__meta">
-      Posted on
+      {{ i18n "postedOn" }}
       <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
-        {{ .Date.Format "Jan 2, 2006" }}
+        {{ .Date.Format (i18n "dateFormat") }}
       </time>
     </p>
   </header>
@@ -12,6 +12,6 @@
     {{ .Summary | plainify | safeHTML }}
   </div>
   {{ if .Truncated }}
-  <a href="{{ .Permalink }}" class="c-article__btn p-list-article__btn">Read more</a>
+  <a href="{{ .Permalink }}" class="c-article__btn p-list-article__btn">{{ i18n "readMore" }}</a>
   {{ end }}
 </article>
