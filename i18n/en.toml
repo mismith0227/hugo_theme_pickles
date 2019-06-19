@@ -16,3 +16,5 @@ other = "Read More"
 [siteOf]
 other = "Page {{ .PageNumber }} of {{.TotalPages}}"
 
+[contactMe]
+other = "Contact me"
