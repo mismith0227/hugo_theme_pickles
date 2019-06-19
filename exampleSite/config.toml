@@ -3,10 +3,10 @@ languageCode = "en-us"
 Title = "Your site title"
 # Copyright notice. This is displayer in the footer.
 copyright = "&copy; Copyright notice"
-custom_css = "/static/css/custom.css"
 
 [params]
   sortByWeight = "asc"
+  custom_css = ["/css/custom.css"]
   paginate = 10
   # Social accounts. Link to these accounts are displayed in the header and
   # footer
