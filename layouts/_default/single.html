@@ -37,6 +37,20 @@
     {{ end }}
     <nav class="p-pagination c-pagination">
       <div class="c-pagination__ctrl">
+        {{ if (eq .Site.Params.SortByWeight "desc") }}
+          <div class="c-pagination__newer">
+            {{ if .PrevPage }}
+            <a href="{{ .PrevPage.Permalink }}">Newer</a>
+            {{ else }}
+            {{ end }}
+          </div>
+          <div class="c-pagination__older">
+            {{ if .NextPage }}
+            <a href="{{ .NextPage.Permalink }}">Older</a>
+            {{ else }}
+            {{ end }}
+          </div>
+        {{ else }}
         <div class="c-pagination__newer">
           {{ if .NextPage }}
           <a href="{{ .NextPage.Permalink }}">Newer</a>
@@ -49,6 +63,7 @@
           {{ else }}
           {{ end }}
         </div>
+        {{ end }}
       </div>
     </nav>
     {{ partial "related.html" . }}
