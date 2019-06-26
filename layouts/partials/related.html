@@ -1,7 +1,7 @@
 {{ $related := .Site.RegularPages.Related . | first 6 }}
 {{ with $related }}
 <section class="p-related">
-  <h3>See Also</h3>
+  <h3>{{i18n "seeAlso"}}</h3>
   <ul id="slider" class="p-related__list">
     {{ range . }}
     <li class="p-related__item js-related__item">

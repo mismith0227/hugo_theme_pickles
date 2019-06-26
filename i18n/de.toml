@@ -18,3 +18,6 @@ other = "Seite {{ .PageNumber }} von {{.TotalPages}}"
 
 [contactMe]
 other = "Kontakt aufnehmen"
+
+[seeAlso]
+other = "Ähnliche Beiträge"
