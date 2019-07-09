@@ -160,9 +160,9 @@
     </a>
   </li>
   {{ end }}
-  {{ if .Site.Params.rss }}
+  {{ with .Site.Params.rss }}
   <li class="c-links__item">
-    <a href="{{ .Site.BaseURL }}/index.xml" target="_blank">
+    <a href="{{ . }}" target="_blank">
       <svg viewBox="0 0 64 64" class="c-links__icon">
         <title>feed</title>
         <use xlink:href="#icon-feed"></use>
