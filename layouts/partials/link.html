@@ -1,4 +1,4 @@
-{{ if or ( .Site.Params.twitter ) ( .Site.Params.facebook ) ( .Site.Params.instagram ) ( .Site.Params.googleplus ) ( .Site.Params.github ) ( .Site.Params.gitlab ) ( .Site.Params.npm ) ( .Site.Params.codepen ) ( .Site.Params.dribbble ) ( .Site.Params.fivehundredpx ) ( .Site.Params.flickr ) ( .Site.Params.pinterest ) ( .Site.Params.tumblr ) ( .Site.Params.vimeo ) ( .Site.Params.youtube ) ( .Site.Params.linkedin ) }}
+{{ if or ( .Site.Params.twitter ) ( .Site.Params.facebook ) ( .Site.Params.instagram ) ( .Site.Params.googleplus ) ( .Site.Params.github ) ( .Site.Params.gitlab ) ( .Site.Params.npm ) ( .Site.Params.codepen ) ( .Site.Params.dribbble ) ( .Site.Params.fivehundredpx ) ( .Site.Params.flickr ) ( .Site.Params.pinterest ) ( .Site.Params.tumblr ) ( .Site.Params.vimeo ) ( .Site.Params.youtube ) ( .Site.Params.linkedin ) ( .Site.Params.rss ) }}
 <ul class="c-links">
   {{ with .Site.Params.twitter }}
   <li class="c-links__item">
@@ -156,6 +156,16 @@
       <svg viewBox="0 0 64 64" class="c-links__icon">
         <title>linkedin</title>
         <use xlink:href="#icon-linkedin"></use>
+      </svg>
+    </a>
+  </li>
+  {{ end }}
+  {{ if .Site.Params.rss }}
+  <li class="c-links__item">
+    <a href="{{ .Site.BaseURL }}/index.xml" target="_blank">
+      <svg viewBox="0 0 64 64" class="c-links__icon">
+        <title>feed</title>
+        <use xlink:href="#icon-feed"></use>
       </svg>
     </a>
   </li>
