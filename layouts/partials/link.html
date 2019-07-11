@@ -160,6 +160,16 @@
     </a>
   </li>
   {{ end }}
+  {{ with .Site.Params.xing }}
+  <li class="c-links__item">
+    <a href="https://www.xing.com/profile/{{ . }}" target="_blank">
+      <svg viewBox="0 0 64 64" class="c-links__icon">
+        <title>xing</title>
+        <use xlink:href="#icon-xing"></use>
+      </svg>
+    </a>
+  </li>
+  {{ end }}
   {{ with .Site.Params.rss }}
   <li class="c-links__item">
     <a href="{{ . }}" target="_blank">
