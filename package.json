@@ -21,7 +21,7 @@
     "del": "3.0.0",
     "exports-loader": "0.7.0",
     "gulp": "3.9.1",
-    "gulp-if": "2.0.2",
+    "gulp-if": "3.0.0",
     "gulp-imagemin": "4.1.0",
     "gulp-plumber": "1.2.0",
     "gulp-postcss": "6.4.0",
