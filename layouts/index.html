@@ -1,9 +1,10 @@
 {{ partial "header.html" . }}
-{{ range $index, $page := sort (.Paginate (where (where .Data.Pages "Type" "posts") ".Params.hidden" "!=" "true" )).Pages "Weight" .Site.Params.SortByWeight }}
-{{ if ne $index 0 }}
+{{ range $index, $page := .Pages.ByPublishDate.Reverse}}
+  {{ if ne $index 0 }}
+  {{ end }}
+  {{ .Render "li" }}
 {{ end }}
-{{ .Render "li" }}
-{{ end }}
+
 {{ partial "pagination.html" .Paginator }}
 {{ partial "siteinfo.html" . }}
 {{ partial "footer.html" . }}
