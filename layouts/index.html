@@ -1,5 +1,5 @@
 {{ partial "header.html" . }}
-{{ range $index, $page := .Pages.ByPublishDate.Reverse}}
+{{ range $index, $page := .Paginator.Pages.ByPublishDate.Reverse}}
   {{ if ne $index 0 }}
   {{ end }}
   {{ .Render "li" }}
