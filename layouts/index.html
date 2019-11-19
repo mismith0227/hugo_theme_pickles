@@ -1,5 +1,5 @@
 {{ partial "header.html" . }}
-{{ range $index, $page := (.Paginate (where (where .Data.Pages "Type" "posts") ".Params.hidden" "!=" "true" )).Pages }}
+{{ range $index, $page := (.Paginate (where (where .Site.RegularPages "Type" "posts") ".Params.hidden" "!=" "true" )).Pages }}
 {{ if ne $index 0 }}
 {{ end }}
 {{ .Render "li" }}

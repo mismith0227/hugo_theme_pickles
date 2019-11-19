@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 <h2 class="c-title p-tag-title">{{ .Title }}</h2>
-{{ range $index, $page := (.Paginate (where .Data.Pages "Type" "posts")).Pages }}
+{{ range $index, $page := (.Paginate (where .Site.RegularPages "Type" "posts")).Pages }}
 {{ if ne $index 0 }}
 {{ end }}
 {{ .Render "li" }}
