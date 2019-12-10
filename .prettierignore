@@ -2,3 +2,4 @@ node_modules/
 static/
 package.json
 layouts/
+.travis.yml
