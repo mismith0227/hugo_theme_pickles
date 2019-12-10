@@ -1,0 +1,32 @@
+.c-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 8px 0 0;
+  padding: 0;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid;
+    border-color: $color-text;
+    border-radius: 50%;
+    color: $color-text;
+    transition: 0.2s;
+    &:hover {
+      background: $color-text;
+      color: #fff;
+    }
+  }
+  &__item {
+    margin: 8px 8px 0;
+    list-style: none;
+  }
+  &__icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+  }
+}

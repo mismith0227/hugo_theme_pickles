@@ -1,7 +1,0 @@
-.p-title {
-  margin: 0;
-  font-size: 4.4rem;
-  &__link {
-    color: var(--color-text);
-  }
-}

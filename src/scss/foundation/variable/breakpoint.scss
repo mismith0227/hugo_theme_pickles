@@ -1,0 +1,24 @@
+// min-width
+$breakpoint-up: (
+  'sm': 'screen and (min-width:640px)',
+  'lmd': 'screen and (min-width:768px)',
+  'lg': 'screen and (min-width:1024px)'
+) !default;
+
+// max-width
+$breakpoint-down: (
+  'md': 'screen and (max-width:767px)'
+) !default;
+
+// @mixin
+@mixin mq-up($breakpoint: md) {
+  @media #{map-get($breakpoint-up, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq-down($breakpoint: md) {
+  @media #{map-get($breakpoint-down, $breakpoint)} {
+    @content;
+  }
+}
