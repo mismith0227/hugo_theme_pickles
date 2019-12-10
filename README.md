@@ -6,29 +6,29 @@ Pickles is a modern, simple and beautiful Hugo theme.
 
 ## Overview
 
-* Modern, Simple and beautiful design
-* Medium's Image Zoom（[zoom.js](https://github.com/fat/zoom.js/))
-* Social links（Twitter,Facebook,Instagram,Google+,GitHub,GitLab,npm,Codepen,Dribbble,500px,Flickr,Pinterest,Tumblr,Vimeo,YouTube,Linkedin）
-* Support for Related Content
-* Support for tags
-* Analytics with Google Analytics
-* Responsive design
-* SVG Sprite
+- Modern, Simple and beautiful design
+- Medium's Image Zoom（[zoom.js](https://github.com/fat/zoom.js/))
+- Social links（Twitter,Facebook,Instagram,Google+,GitHub,GitLab,npm,Codepen,Dribbble,500px,Flickr,Pinterest,Tumblr,Vimeo,YouTube,Linkedin）
+- Support for Related Content
+- Support for tags
+- Analytics with Google Analytics
+- Responsive design
+- SVG Sprite
 
 Use short code for Image Zoom.
 
 ```
-{{% zoom-img src="/images/default.jpg" %}}
+{{< zoom-img src="/images/default.jpg" >}}
 ```
 
 ## Features
 
-* gulp
-* webpack
-* PostCSS
-* Babel
-* SVG Sprite
-* Standard
+- gulp
+- webpack
+- Sass
+- Babel
+- SVG Sprite
+- Standard
 
 ## Installation
 
@@ -73,11 +73,11 @@ Please create feature branches from [develop](https://github.com/mismith0227/hug
 
 ## Development
 
-1. Install Node modules
+1.  Install Node modules
 
         $ yarn
 
-1. Run gulp. You don't need to install gulp globally.
+1.  Run gulp. You don't need to install gulp globally.
 
         // Development
         $ yarn run dev

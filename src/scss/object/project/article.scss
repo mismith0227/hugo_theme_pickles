@@ -1,0 +1,24 @@
+.p-article {
+  &__thumbnail {
+    margin-top: 24px;
+  }
+  &__body {
+    margin: 40px 0 30px;
+    word-wrap: break-word;
+    @include mq-up(sm) {
+      margin: 40px 0 60px;
+    }
+    img[data-action^='zoom'] {
+      &:hover {
+        cursor: zoom-in;
+      }
+    }
+    .zoom-img-wrap {
+      img {
+        &:hover {
+          cursor: zoom-out;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.p-author {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 20px auto 0;
+  @include mq-up(sm) {
+    display: flex;
+    margin: 80px auto 0;
+  }
+  &::before {
+    content: '* * *';
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #999;
+    @include mq-up(sm) {
+      top: -50px;
+    }
+  }
+  &__name {
+    font-size: 2.8rem;
+  }
+  &__body {
+    flex: 1;
+    @include mq-up(sm) {
+      padding-left: 16px;
+    }
+    p {
+      margin: 0;
+    }
+  }
+}
