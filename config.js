@@ -1,4 +1,4 @@
-import minimist from 'minimist'
+const minimist = require('minimist')
 
 const envSettings = {
   string: 'env',
@@ -19,25 +19,9 @@ const config = {
 }
 
 const tasks = {
-  css: {
-    src: `${config.dirs.src}/css/style.css`,
-    dest: `${config.dirs.dest}/css`,
-    processors: [
-      require('postcss-import'),
-      require('postcss-custom-properties'),
-      require('postcss-custom-media'),
-      require('postcss-apply'),
-      require('postcss-nesting'),
-      require('postcss-flexbugs-fixes'),
-      require('autoprefixer'),
-      require('postcss-browser-reporter')({
-        selector: 'body:before'
-      }),
-      require('postcss-reporter')({
-        clearMessages: true
-      })
-    ],
-    minifyLib: require('csswring')
+  scss: {
+    src: `${config.dirs.src}/scss/style.scss`,
+    dest: `${config.dirs.dest}/css`
   },
   webpack: {
     src: `${config.dirs.src}/js/app.js`,
@@ -45,7 +29,7 @@ const tasks = {
     filename: 'bundle.js'
   },
   watch: {
-    css: [`${config.dirs.src}/css/**/*.css`],
+    css: [`${config.dirs.src}/scss/**/*.css`],
     image: [`${config.dirs.src}/img/**/*`],
     webpack: [`${config.dirs.src}/js/**/*.js`]
   },
@@ -66,9 +50,7 @@ const tasks = {
     dest: './layouts/partials',
     filename: 'svgpack-sprite.html'
   },
-  clean: [
-    config.dirs.dest
-  ]
+  clean: [config.dirs.dest]
 }
 
 config.tasks = tasks

@@ -1,0 +1,9 @@
+.p-pagination {
+  margin: 30px 0;
+  @include mq-up(sm) {
+    margin: 60px 0;
+  }
+  &__count {
+    margin-top: 24px;
+  }
+}
