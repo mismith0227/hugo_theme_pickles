@@ -67,7 +67,6 @@ const clean = cb => {
 
 // Watch
 // =====================================================
-// watch
 const watchFiles = () => {
   watch(config.tasks.scss.src, compileSass)
   watch(config.tasks.webpack.src, compileJavascript)
