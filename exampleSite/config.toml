@@ -25,6 +25,7 @@ custom_css = "/static/css/custom.css"
   vimeo = "Your Vimeo username"
   youtube = "Your YouTube username"
   linkedin = "Your LinkedIn username"
+  medium = "Your Medium username"
   # Disqus shortname
   disqus = ""
   # Google Analytics API key.
