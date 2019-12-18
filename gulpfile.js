@@ -82,8 +82,8 @@ const defaultTask = gulp.series(
   compileJavascript,
   minifyImages,
   font,
+  svgRename,
   watchFiles,
-  svgRename
 )
 
 // Build

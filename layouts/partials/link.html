@@ -1,5 +1,15 @@
-{{ if or ( .Site.Params.twitter ) ( .Site.Params.facebook ) ( .Site.Params.instagram ) ( .Site.Params.googleplus ) ( .Site.Params.github ) ( .Site.Params.gitlab ) ( .Site.Params.npm ) ( .Site.Params.codepen ) ( .Site.Params.dribbble ) ( .Site.Params.fivehundredpx ) ( .Site.Params.flickr ) ( .Site.Params.pinterest ) ( .Site.Params.tumblr ) ( .Site.Params.vimeo ) ( .Site.Params.youtube ) ( .Site.Params.linkedin ) }}
+{{ if or ( .Site.Params.medium ) ( .Site.Params.twitter ) ( .Site.Params.facebook ) ( .Site.Params.instagram ) ( .Site.Params.googleplus ) ( .Site.Params.github ) ( .Site.Params.gitlab ) ( .Site.Params.npm ) ( .Site.Params.codepen ) ( .Site.Params.dribbble ) ( .Site.Params.fivehundredpx ) ( .Site.Params.flickr ) ( .Site.Params.pinterest ) ( .Site.Params.tumblr ) ( .Site.Params.vimeo ) ( .Site.Params.youtube ) ( .Site.Params.linkedin ) }}
 <ul class="c-links">
+  {{ with .Site.Params.medium }}
+  <li class="c-links__item">
+    <a href="https://medium.com/{{ . }}" target="_blank">
+      <svg viewBox="0 0 64 64" class="c-links__icon">
+        <title>medium</title>
+        <use xlink:href="#icon-medium"></use>
+      </svg>
+    </a>
+  </li>
+  {{ end }}
   {{ with .Site.Params.twitter }}
   <li class="c-links__item">
     <a href="https://twitter.com/{{ . }}" target="_blank">
