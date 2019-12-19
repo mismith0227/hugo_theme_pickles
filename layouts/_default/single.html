@@ -22,7 +22,7 @@
     {{ .Content }}
   </section>
   <footer>
-    {{ with .Site.Params.disqus }}
+    {{ with ($.Param "disqus") }}
     <div id="disqus_thread"></div>
     <script>
     var disqus_shortname = '{{ . }}';

@@ -1,6 +1,6 @@
-{{ if or ( .Site.Params.medium ) ( .Site.Params.twitter ) ( .Site.Params.facebook ) ( .Site.Params.instagram ) ( .Site.Params.googleplus ) ( .Site.Params.github ) ( .Site.Params.gitlab ) ( .Site.Params.npm ) ( .Site.Params.codepen ) ( .Site.Params.dribbble ) ( .Site.Params.fivehundredpx ) ( .Site.Params.flickr ) ( .Site.Params.pinterest ) ( .Site.Params.tumblr ) ( .Site.Params.vimeo ) ( .Site.Params.youtube ) ( .Site.Params.linkedin ) }}
+{{ if or ( $.Param "medium" ) ( $.Param "twitter" ) ( $.Param "facebook" ) ( $.Param "instagram" ) ( $.Param "googleplus" ) ( $.Param "github" ) ( $.Param "gitlab" ) ( $.Param "npm" ) ( $.Param "codepen" ) ( $.Param "dribbble" ) ( $.Param "fivehundredpx" ) ( $.Param "flickr" ) ( $.Param "pinterest" ) ( $.Param "tumblr" ) ( $.Param "vimeo" ) ( $.Param "youtube" ) ( $.Param "linkedin" ) }}
 <ul class="c-links">
-  {{ with .Site.Params.medium }}
+  {{ with ($.Param "medium") }}
   <li class="c-links__item">
     <a href="https://medium.com/{{ . }}" target="_blank">
       <svg viewBox="0 0 64 64" class="c-links__icon">
@@ -10,7 +10,7 @@
     </a>
   </li>
   {{ end }}
-  {{ with .Site.Params.twitter }}
+  {{ with ($.Param "twitter") }}
   <li class="c-links__item">
     <a href="https://twitter.com/{{ . }}" target="_blank">
       <svg viewBox="0 0 64 64" class="c-links__icon">
@@ -20,7 +20,7 @@
     </a>
   </li>
   {{ end }}
-  {{ with .Site.Params.facebook }}
+  {{ with ($.Param "facebook") }}
   <li class="c-links__item">
     <a href="https://facebook.com/{{ . }}" target="_blank">
       <svg viewBox="0 0 64 64" class="c-links__icon">
@@ -30,7 +30,7 @@
     </a>
   </li>
   {{ end }}
-  {{ with .Site.Params.instagram }}
+  {{ with ($.Param "instagram") }}
   <li class="c-links__item">
     <a href="https://instagram.com/{{ . }}" target="_blank">
       <svg viewBox="0 0 64 64" class="c-links__icon">
@@ -40,7 +40,7 @@
     </a>
   </li>
   {{ end }}
-  {{ with .Site.Params.googleplus }}
+  {{ with ($.Param "googleplus") }}
   <li class="c-links__item">
     <a href="{{ . }}" target="_blank">
       <svg viewBox="0 0 64 64" class="c-links__icon">
@@ -50,7 +50,7 @@
     </a>
   </li>
   {{ end }}
-  {{ with .Site.Params.github }}
+  {{ with ($.Param "github") }}
   <li class="c-links__item">
     <a href="https://github.com/{{ . }}" target="_blank">
       <svg viewBox="0 0 64 64" class="c-links__icon">
@@ -60,7 +60,7 @@
     </a>
   </li>
   {{ end }}
-  {{ with .Site.Params.gitlab }}
+  {{ with ($.Param "gitlab") }}
   <li class="c-links__item">
     <a href="https://gitlab.com/{{ . }}" target="_blank">
       <svg viewBox="0 0 64 64" class="c-links__icon">
@@ -70,7 +70,7 @@
     </a>
   </li>
   {{ end }}
-  {{ with .Site.Params.npm }}
+  {{ with ($.Param "npm") }}
   <li class="c-links__item">
     <a href="https://www.npmjs.com/{{ . }}" target="_blank">
       <svg viewBox="0 0 64 64" class="c-links__icon">
@@ -80,7 +80,7 @@
     </a>
   </li>
   {{ end }}
-  {{ with .Site.Params.codepen }}
+  {{ with ($.Param "codepen") }}
   <li class="c-links__item">
     <a href="https://codepen.io/{{ . }}" target="_blank">
       <svg viewBox="0 0 64 64" class="c-links__icon">
@@ -90,7 +90,7 @@
     </a>
   </li>
   {{ end }}
-  {{ with .Site.Params.dribbble }}
+  {{ with ($.Param "dribbble") }}
   <li class="c-links__item">
     <a href="https://dribbble.com/{{ . }}" target="_blank">
       <svg viewBox="0 0 64 64" class="c-links__icon">
@@ -100,7 +100,7 @@
     </a>
   </li>
   {{ end }}
-  {{ with .Site.Params.fivehundredpx }}
+  {{ with ($.Param "fivehundredpx") }}
   <li class="c-links__item">
     <a href="https://500px.com/{{ . }}" target="_blank">
       <svg viewBox="0 0 64 64" class="c-links__icon">
@@ -110,7 +110,7 @@
     </a>
   </li>
   {{ end }}
-  {{ with .Site.Params.flickr }}
+  {{ with ($.Param "flickr") }}
   <li class="c-links__item">
     <a href="https://www.flickr.com/photos/{{ . }}" target="_blank">
       <svg viewBox="0 0 64 64" class="c-links__icon">
@@ -120,7 +120,7 @@
     </a>
   </li>
   {{ end }}
-  {{ with .Site.Params.pinterest }}
+  {{ with ($.Param "pinterest") }}
   <li class="c-links__item">
     <a href="https://www.pinterest.jp/{{ . }}" target="_blank">
       <svg viewBox="0 0 64 64" class="c-links__icon">
@@ -130,7 +130,7 @@
     </a>
   </li>
   {{ end }}
-  {{ with .Site.Params.tumblr }}
+  {{ with ($.Param "tumblr") }}
   <li class="c-links__item">
     <a href="https://www.tumblr.com/blog/{{ . }}" target="_blank">
       <svg viewBox="0 0 64 64" class="c-links__icon">
@@ -140,7 +140,7 @@
     </a>
   </li>
   {{ end }}
-  {{ with .Site.Params.vimeo }}
+  {{ with ($.Param "vimeo") }}
   <li class="c-links__item">
     <a href="https://vimeo.com/{{ . }}" target="_blank">
       <svg viewBox="0 0 64 64" class="c-links__icon">
@@ -150,7 +150,7 @@
     </a>
   </li>
   {{ end }}
-  {{ with .Site.Params.youtube }}
+  {{ with ($.Param "youtube") }}
   <li class="c-links__item">
     <a href="https://www.youtube.com/user/{{ . }}" target="_blank">
       <svg viewBox="0 0 64 64" class="c-links__icon">
@@ -160,7 +160,7 @@
     </a>
   </li>
   {{ end }}
-  {{ with .Site.Params.linkedin }}
+  {{ with ($.Param "linkedin") }}
   <li class="c-links__item">
     <a href="https://linkedin.com/in/{{ . }}" target="_blank">
       <svg viewBox="0 0 64 64" class="c-links__icon">
