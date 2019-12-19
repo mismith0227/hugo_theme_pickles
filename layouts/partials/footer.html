@@ -7,11 +7,11 @@
       {{ with .Site.Copyright | safeHTML }}
         {{ . }}
       {{ else }}
-        {{ if .Site.Params.author }}
-          {{ if .Site.Params.authorwebsite }}
-            <a href="{{ .Site.Params.authorwebsite }}">{{ .Site.Params.author }}</a>
+        {{ if ($.Param "author") }}
+          {{ if ($.Param "authorwebsite") }}
+            <a href="{{ $.Param "authorwebsite" }}">{{ $.Param "author" }}</a>
           {{ else }}
-            {{ .Site.Params.author }}
+            {{ $.Param "author" }}
           {{ end }}
         {{ end }}
         &nbsp;&bull;&nbsp;
@@ -26,7 +26,7 @@
   </footer>
 
   {{ if not .Site.IsServer }}
-    {{ with .Site.Params.ga_api_key }}
+    {{ with ($.Param "ga_api_key") }}
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
