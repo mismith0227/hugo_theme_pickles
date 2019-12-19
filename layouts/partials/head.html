@@ -7,13 +7,13 @@
   <meta name="twitter:title" content="{{ . }}" />
   {{ end }}
 
-  {{ with .Description | default .Site.Params.subtitle }}
+  {{ with .Description | default ($.Param "subtitle") }}
   <meta name="description" content="{{ . }}">
   <meta property="og:description" content="{{ . }}">
   <meta name="twitter:description" content="{{ . | truncate 200 }}">
   {{ end }}
 
-  <meta name="author" content="{{ .Site.Params.author }}"/>
+  <meta name="author" content="{{ $.Param "author" }}"/>
   <meta property="og:site_name" content="{{ .Site.Title }}" />
   <meta property="og:url" content="{{ .Permalink }}" />
 
@@ -23,14 +23,14 @@
   {{ end }}
   <meta name="twitter:card" content="summary" />
 
-  {{ with .Site.Params.twitter }}
+  {{ with ($.Param "twitter") }}
   <meta name="twitter:site" content="@{{ . }}" />
   <meta name="twitter:creator" content="@{{ . }}" />
   {{ end }}
 
   {{ if .IsPage }}
   <meta property="og:type" content="article" />
-  {{ with .Site.Params.facebook }}
+  {{ with ($.Param "facebook") }}
   <meta property="og:article:author" content="https://facebook.com/{{ . }}" />
   {{ end }}
   {{ else }}
@@ -41,10 +41,10 @@
   
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css" />
   <!-- Custom css files as define in config.toml -->
-  {{ range .Site.Params.custom_css -}}
+  {{ range ($.Param "custom_css") -}}
     <link rel="stylesheet" href="{{ . | absURL }}">
   {{- end }}
-  {{- with .Site.Params.favicon }}
+  {{- with ($.Param "favicon") }}
   <link rel='icon' type='image/x-icon' href="{{ . | absURL }}" />
   {{- end -}}
   {{ if eq .RelPermalink "/" }}

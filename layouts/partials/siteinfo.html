@@ -1,19 +1,19 @@
-{{ if or ( .Site.Params.avatar ) ( .Site.Params.author ) ( .Site.Params.bio ) ( .Site.Params.contact ) }}
+{{ if or ( $.Param "avatar" ) ( $.Param "author" ) ( $.Param "bio" ) ( $.Param "contact" ) }}
 <aside class="p-author">
-  {{ with .Site.Params.avatar }}
+  {{ with ($.Param "avatar") }}
   <div class="c-avatar p-author__avatar">
     <img alt="Author Avatar" src="{{ . }}" />
   </div>
   {{ end }}
-  {{ if or ( .Site.Params.author ) ( .Site.Params.bio ) ( .Site.Params.contact ) }}
+  {{ if or ( $.Param "author" ) ( $.Param "bio" ) ( $.Param "contact" ) }}
   <div class="p-author__body">
-    {{ with .Site.Params.author }}
+    {{ with ($.Param "author") }}
     <p class="c-title p-author__name ">{{ . }}</p>
     {{ end }}
-    {{ with .Site.Params.bio }}
+    {{ with ($.Param "bio") }}
     <p>{{ . }}</p>
     {{ end }}
-    {{ with .Site.Params.contact }}
+    {{ with ($.Param "contact") }}
     <p>
       <a href="{{ . }}">
         Contact me
