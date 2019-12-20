@@ -38,14 +38,14 @@
     <nav class="p-pagination c-pagination">
       <div class="c-pagination__ctrl">
         <div class="c-pagination__newer">
-          {{ if .NextPage }}
-          <a href="{{ .NextPage.Permalink }}">Newer</a>
+          {{ if .NextInSection }}
+          <a href="{{ .NextInSection.Permalink }}">Newer</a>
           {{ else }}
           {{ end }}
         </div>
         <div class="c-pagination__older">
-          {{ if .PrevPage }}
-          <a href="{{ .PrevPage.Permalink }}">Older</a>
+          {{ if .PrevInSection }}
+          <a href="{{ .PrevInSection.Permalink }}">Older</a>
           {{ else }}
           {{ end }}
         </div>
