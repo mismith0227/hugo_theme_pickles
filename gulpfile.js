@@ -83,7 +83,7 @@ const defaultTask = gulp.series(
   minifyImages,
   font,
   svgRename,
-  watchFiles,
+  watchFiles
 )
 
 // Build
@@ -98,6 +98,6 @@ const build = gulp.series(
   svgRename
 )
 
-gulp.task('build', build)
+exports.build = build
 
 exports.default = defaultTask
