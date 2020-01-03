@@ -52,10 +52,10 @@ p {
 }
 
 a {
-  color: var(--link-color);
+  color: $link-color;
   text-decoration: none;
   &:hover {
-    color: var(--link-hover);
+    color: $link-hover;
   }
 }
 

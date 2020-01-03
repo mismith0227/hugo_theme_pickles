@@ -4,7 +4,7 @@
     & a {
       color: $color-text;
       &:hover {
-        color: var(--link-hover);
+        color: $link-hover;
       }
     }
   }
