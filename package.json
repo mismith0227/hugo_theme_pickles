@@ -31,6 +31,6 @@
     "svgpack": "^3.1.1",
     "webpack": "^4.41.2",
     "webpack-stream": "^5.2.1",
-    "zoom.js": "https://github.com/fat/zoom.js/"
+    "zooming": "^2.1.1"
   }
 }
