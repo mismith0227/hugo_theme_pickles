@@ -5,6 +5,9 @@ Title = "Your site title"
 copyright = "&copy; Copyright notice"
 custom_css = "/static/css/custom.css"
 
+# Google Analytics API key.
+googleAnalytics = "Your Google Analytics tracking id"
+
 [params]
   paginate = 10
   # Social accounts. Link to these accounts are displayed in the header and
@@ -28,8 +31,6 @@ custom_css = "/static/css/custom.css"
   medium = "Your Medium username"
   # Disqus shortname
   disqus = ""
-  # Google Analytics API key.
-  ga_api_key = "Your Google Analytics tracking id"
   author = "Your Name"
   authorwebsite = "example.com"
   avatar = "/path/to/avatar"
