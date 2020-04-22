@@ -39,10 +39,10 @@
   <!-- Hugo Version Number -->
   {{ hugo.Generator -}}
 
-  {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
+  {{ if not .Site.IsServer }}
   {{ template "_internal/google_analytics_async.html" . }}
   {{ end }}
-  
+
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/style.css" />
   <!-- Custom css files as define in config.toml -->
   {{ range ($.Param "custom_css") -}}
