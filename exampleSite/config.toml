@@ -15,7 +15,6 @@ googleAnalytics = "Your Google Analytics tracking id"
   twitter = "Your Twitter username"
   facebook = "Your Facebook username"
   instagram = "Your Instagram username"
-  googleplus = "Your Google+ account URL" # https://plus.google.com/u/0/xxxxxx
   github = "Your GitHub username"
   gitlab = "Your GitLab username"
   npm = "Your npm username"
