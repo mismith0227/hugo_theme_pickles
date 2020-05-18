@@ -3,19 +3,18 @@ languageCode = "en-us"
 Title = "Your site title"
 # Copyright notice. This is displayer in the footer.
 copyright = "&copy; Copyright notice"
-custom_css = "/static/css/custom.css"
 
 # Google Analytics API key.
 googleAnalytics = "Your Google Analytics tracking id"
 
 [params]
   paginate = 10
+  custom_css = ["/css/custom.css"]
   # Social accounts. Link to these accounts are displayed in the header and
   # footer
   twitter = "Your Twitter username"
   facebook = "Your Facebook username"
   instagram = "Your Instagram username"
-  googleplus = "Your Google+ account URL" # https://plus.google.com/u/0/xxxxxx
   github = "Your GitHub username"
   gitlab = "Your GitLab username"
   npm = "Your npm username"
