@@ -4,9 +4,11 @@
   <header>
     <h1>{{ .Title }}</h1>
     <div>
-      <div class="c-time">
-        {{ partial "timestamp.html" . }}
-      </div>
+      {{ if not .Params.hideDate }}
+        <div class="c-time">
+          {{ partial "timestamp.html" . }}
+        </div>
+      {{ end }}
       {{ range .Params.tags }}
       <a href="{{ $baseurl }}/tags/{{ . | urlize }}" class="c-tag">{{ . }}</a>
       {{ end }}
