@@ -65,6 +65,16 @@ $ cp themes/hugo_theme_pickles/exampleSite/config.toml .
 
 Now, you can start editing this file and add your own information!
 
+## Customisation
+
+To hide the date in any page or post, set the `hideDate` parameter in the front matter:
+
+```
+---
+hideDate: true
+---
+```
+
 ## Contributing
 
 Pull requests, bug fixes and new features are welcome!
