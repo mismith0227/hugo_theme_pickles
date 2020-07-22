@@ -28,6 +28,7 @@ googleAnalytics = "Your Google Analytics tracking id"
   youtube = "Your YouTube username"
   linkedin = "Your LinkedIn username"
   medium = "Your Medium username"
+  strava = "Your Strava userid"
   # Disqus shortname
   disqus = ""
   author = "Your Name"
