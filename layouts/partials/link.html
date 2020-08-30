@@ -1,4 +1,4 @@
-{{ if or ( $.Param "medium" ) ( $.Param "twitter" ) ( $.Param "facebook" ) ( $.Param "instagram" ) ( $.Param "github" ) ( $.Param "gitlab" ) ( $.Param "npm" ) ( $.Param "codepen" ) ( $.Param "dribbble" ) ( $.Param "fivehundredpx" ) ( $.Param "flickr" ) ( $.Param "pinterest" ) ( $.Param "tumblr" ) ( $.Param "vimeo" ) ( $.Param "youtube" ) ( $.Param "linkedin" ) }}
+{{ if or ( $.Param "medium" ) ( $.Param "twitter" ) ( $.Param "facebook" ) ( $.Param "instagram" ) ( $.Param "github" ) ( $.Param "gitlab" ) ( $.Param "npm" ) ( $.Param "codepen" ) ( $.Param "dribbble" ) ( $.Param "fivehundredpx" ) ( $.Param "flickr" ) ( $.Param "pinterest" ) ( $.Param "tumblr" ) ( $.Param "vimeo" ) ( $.Param "youtube" ) ( $.Param "linkedin" ) ( $.Param "strava" ) }}
 <ul class="c-links">
   {{ with ($.Param "medium") }}
   <li class="c-links__item">
@@ -156,6 +156,16 @@
       <svg viewBox="0 0 64 64" class="c-links__icon">
         <title>linkedin</title>
         <use xlink:href="#icon-linkedin"></use>
+      </svg>
+    </a>
+  </li>
+  {{ end }}
+  {{ with ($.Param "strava") }}
+  <li class="c-links__item">
+    <a href="https://www.strava.com/athletes/{{ . }}" target="_blank">
+      <svg viewBox="0 0 64 64" class="c-links__icon">
+        <title>strava</title>
+        <use xlink:href="#icon-strava"></use>
       </svg>
     </a>
   </li>
