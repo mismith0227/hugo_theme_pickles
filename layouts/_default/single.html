@@ -21,6 +21,7 @@
     {{ .Content }}
   </section>
   <footer>
+    {{ partial "comment_custom.html" . }}
     {{ with ($.Param "disqus") }}
     <div id="disqus_thread"></div>
     <script>
