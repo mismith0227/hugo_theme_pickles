@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "hugo": "hugo server",
+    "hugo": "hugo server -s exampleSite --baseUrl http://localhost --themesDir=../../ --theme=hugo_theme_pickles",
     "dev": "gulp",
     "prod": "gulp --env production",
     "build": "gulp build --env production",

@@ -85,22 +85,26 @@ Please create feature branches from [develop](https://github.com/mismith0227/hug
 
 1.  Install Node modules
 
-        $ yarn
+```sh
+yarn
+```
 
 1.  Run gulp. You don't need to install gulp globally.
 
-        // Development
-        $ yarn run dev
-        $ // On another tab
-        $ hugo server
+```
+// Development
+$ yarn run dev
+$ // On another tab
+$ yarn run hugo
 
-        // Production (compress)
-        $ yarn run prod
-        $ // On another tab
-        $ hugo server
+// Production (compress)
+$ yarn run prod
+$ // On another tab
+$ yarn run hugo
 
-        // Build
-        $ yarn run build
+// Build
+$ yarn run build
+```
 
 ## License
 
