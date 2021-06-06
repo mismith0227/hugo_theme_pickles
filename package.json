@@ -26,7 +26,7 @@
     "jquery": "^3.2.1",
     "minimist": "^1.2.0",
     "slick-carousel": "^1.8.1",
-    "standard": "^14.3.1",
+    "standard": "^16.0.0",
     "standard-loader": "^7.0.0",
     "svgpack": "^3.1.1",
     "webpack": "^4.41.2",
