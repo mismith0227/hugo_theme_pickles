@@ -13,7 +13,7 @@
   "author": "mismith0227",
   "license": "MIT",
   "devDependencies": {
-    "gulp-sass": "^4.0.2"
+    "gulp-sass": "4.0.2"
   },
   "dependencies": {
     "@babel/core": "^7.7.5",
