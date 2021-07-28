@@ -1,3 +1,6 @@
+@use "../variable/color.scss" as color;
+@use "../variable/font-family.scss" as fontFamily;
+
 * {
   box-sizing: border-box;
 }
@@ -7,9 +10,9 @@ html {
 }
 
 body {
-  color: $color-text;
+  color: color.$color-text;
   font-size: 1rem;
-  font-family: $SanFrancisco;
+  font-family: fontFamily.$SanFrancisco;
   line-height: 1.57;
 }
 
@@ -20,7 +23,7 @@ h4,
 h5,
 h6 {
   font-weight: 300;
-  font-family: $OpenSans;
+  font-family: fontFamily.$OpenSans;
 }
 
 h1 {
@@ -52,10 +55,10 @@ p {
 }
 
 a {
-  color: $link-color;
+  color: color.$link-color;
   text-decoration: none;
   &:hover {
-    color: $link-hover;
+    color: color.$link-hover;
   }
 }
 
