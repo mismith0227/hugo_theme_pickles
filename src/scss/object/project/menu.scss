@@ -1,3 +1,6 @@
+@use "../../foundation/variable/breakpoint.scss" as breakpoint;
+@use '../../foundation/variable/color.scss' as color;
+
 .p-menu {
   margin-top: 40px;
   &__lists {
@@ -5,14 +8,14 @@
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
-    @include mq-up(sm) {
+    @include breakpoint.mq-up(sm) {
       display: flex;
     }
   }
   &__listitem {
     margin: 12px 0 0 0;
     list-style: none;
-    @include mq-up(sm) {
+    @include breakpoint.mq-up(sm) {
       margin: 24px 24px 0 0;
     }
     a {
@@ -34,7 +37,7 @@
   }
   &__parent {
     span {
-      color: $link-color;
+      color: color.$link-color;
     }
   }
 }

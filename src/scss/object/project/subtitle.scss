@@ -1,7 +1,10 @@
+@use '../../foundation/variable/color.scss' as color;
+@use "../../foundation/variable/font-family.scss" as fontFamily;
+
 .p-subtitle {
   margin: 12px 0 0 0;
-  color: $color-text;
+  color: color.$color-text;
   font-size: 1.4rem;
   font-weight: 300;
-  font-family: $OpenSans;
+  font-family: fontFamily.$OpenSans;
 }

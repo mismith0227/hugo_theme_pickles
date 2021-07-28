@@ -1,3 +1,5 @@
+@use "../variable/breakpoint.scss" as breakpoint;
+
 .slick-slider {
   position: relative;
 }
@@ -32,7 +34,7 @@
     height: 5px;
     border: solid #fafafa;
   }
-  @include mq-down(md) {
+  @include breakpoint.mq-down(md) {
     display: none !important;
   }
 }

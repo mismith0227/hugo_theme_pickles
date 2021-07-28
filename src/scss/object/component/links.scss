@@ -1,3 +1,5 @@
+@use '../../foundation/variable/color.scss' as color;
+
 .c-links {
   display: flex;
   justify-content: center;
@@ -11,12 +13,12 @@
     width: 30px;
     height: 30px;
     border: 1px solid;
-    border-color: $color-text;
+    border-color: color.$color-text;
     border-radius: 50%;
-    color: $color-text;
+    color: color.$color-text;
     transition: 0.2s;
     &:hover {
-      background: $color-text;
+      background: color.$color-text;
       color: #fff;
     }
   }
