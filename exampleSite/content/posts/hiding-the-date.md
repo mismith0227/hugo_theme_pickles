@@ -1,12 +1,12 @@
 ---
-author: "Dave Kerr"
+author: 'Dave Kerr'
 date: 2020-06-11
 linktitle: Hiding the Date
 title: Hiding the Date
 weight: 10
 hideDate: true
+tags: ['go', 'golang', 'hugo', 'development']
 ---
-
 
 ## Introduction
 

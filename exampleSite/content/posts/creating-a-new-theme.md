@@ -1,13 +1,13 @@
 ---
-author: "Michael Henderson"
+author: 'Michael Henderson'
 date: 2014-09-28
 linktitle: Creating a New Theme
 next: /tutorials/github-pages-blog
 prev: /tutorials/automated-deployments
 title: Creating a New Theme
 weight: 10
+tags: ['go', 'golang', 'hugo', 'development']
 ---
-
 
 ## Introduction
 
@@ -45,7 +45,6 @@ bah and humbug
 $
 ```
 
-
 ## Some Definitions
 
 There are a few concepts that you need to understand before creating a theme.
@@ -54,15 +53,15 @@ There are a few concepts that you need to understand before creating a theme.
 
 Skins are the files responsible for the look and feel of your site. It’s the CSS that controls colors and fonts, it’s the Javascript that determines actions and reactions. It’s also the rules that Hugo uses to transform your content into the HTML that the site will serve to visitors.
 
-You have two ways to create a skin. The simplest way is to create it in the ```layouts/``` directory. If you do, then you don’t have to worry about configuring Hugo to recognize it. The first place that Hugo will look for rules and files is in the ```layouts/``` directory so it will always find the skin.
+You have two ways to create a skin. The simplest way is to create it in the `layouts/` directory. If you do, then you don’t have to worry about configuring Hugo to recognize it. The first place that Hugo will look for rules and files is in the `layouts/` directory so it will always find the skin.
 
-Your second choice is to create it in a sub-directory of the ```themes/``` directory. If you do, then you must always tell Hugo where to search for the skin. It’s extra work, though, so why bother with it?
+Your second choice is to create it in a sub-directory of the `themes/` directory. If you do, then you must always tell Hugo where to search for the skin. It’s extra work, though, so why bother with it?
 
-The difference between creating a skin in ```layouts/``` and creating it in ```themes/``` is very subtle. A skin in ```layouts/``` can’t be customized without updating the templates and static files that it is built from. A skin created in ```themes/```, on the other hand, can be and that makes it easier for other people to use it.
+The difference between creating a skin in `layouts/` and creating it in `themes/` is very subtle. A skin in `layouts/` can’t be customized without updating the templates and static files that it is built from. A skin created in `themes/`, on the other hand, can be and that makes it easier for other people to use it.
 
-The rest of this tutorial will call a skin created in the ```themes/``` directory a theme.
+The rest of this tutorial will call a skin created in the `themes/` directory a theme.
 
-Note that you can use this tutorial to create a skin in the ```layouts/``` directory if you wish to. The main difference will be that you won’t need to update the site’s configuration file to use a theme.
+Note that you can use this tutorial to create a skin in the `layouts/` directory if you wish to. The main difference will be that you won’t need to update the site’s configuration file to use a theme.
 
 ### The Home Page
 
@@ -72,7 +71,7 @@ The home page, or landing page, is the first page that many visitors to a site s
 
 When Hugo runs, it looks for a configuration file that contains settings that override default values for the entire site. The file can use TOML, YAML, or JSON. I prefer to use TOML for my configuration files. If you prefer to use JSON or YAML, you’ll need to translate my examples. You’ll also need to change the name of the file since Hugo uses the extension to determine how to process it.
 
-Hugo translates Markdown files into HTML. By default, Hugo expects to find Markdown files in your ```content/``` directory and template files in your ```themes/``` directory. It will create HTML files in your ```public/``` directory. You can change this by specifying alternate locations in the configuration file.
+Hugo translates Markdown files into HTML. By default, Hugo expects to find Markdown files in your `content/` directory and template files in your `themes/` directory. It will create HTML files in your `public/` directory. You can change this by specifying alternate locations in the configuration file.
 
 ### Content
 
@@ -184,8 +183,6 @@ $
 
 Hugo created two XML files, which is standard, but there are no HTML files.
 
-
-
 ### Test the New Site
 
 Verify that you can run the built-in web server. It will dramatically shorten your development cycle if you do. Start it by running the "server" command. If it is successful, you will see output similar to the following:
@@ -227,7 +224,7 @@ That second warning is easier to explain. We haven’t created a template to be 
 
 Now for the first warning. It is for the home page. You can tell because the first layout that it looked for was “index.html.” That’s only used by the home page.
 
-I like that the verbose flag causes Hugo to list the files that it's searching for. For the home page, they are index.html, _default/list.html, and _default/single.html. There are some rules that we'll cover later that explain the names and paths. For now, just remember that Hugo couldn't find a template for the home page and it told you so.
+I like that the verbose flag causes Hugo to list the files that it's searching for. For the home page, they are index.html, \_default/list.html, and \_default/single.html. There are some rules that we'll cover later that explain the names and paths. For now, just remember that Hugo couldn't find a template for the home page and it told you so.
 
 At this point, you've got a working installation and site that we can build upon. All that’s left is to add some content and a theme to display it.
 
@@ -238,7 +235,6 @@ Hugo doesn't ship with a default theme. There are a few available (I counted a d
 We're going to create a new theme called "zafta." Since the goal of this tutorial is to show you how to fill out the files to pull in your content, the theme will not contain any CSS. In other words, ugly but functional.
 
 All themes have opinions on content and layout. For example, Zafta uses "post" over "blog". Strong opinions make for simpler templates but differing opinions make it tougher to use themes. When you build a theme, consider using the terms that other themes do.
-
 
 ### Create a Skeleton
 
@@ -298,8 +294,6 @@ $ find themes/zafta -name '*.html' | xargs ls -l
 -rw-r--r--  1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/partials/header.html
 $
 ```
-
-
 
 ### Update the Configuration File to Use the Theme
 
@@ -415,7 +409,7 @@ Check the main Hugo site for information on using Git with Hugo.
 
 ### Purge the public/ Directory
 
-When generating the site, Hugo will create new files and update existing ones in the ```public/``` directory. It will not delete files that are no longer used. For example, files that were created in the wrong directory or with the wrong title will remain. If you leave them, you might get confused by them later. I recommend cleaning out your site prior to generating it.
+When generating the site, Hugo will create new files and update existing ones in the `public/` directory. It will not delete files that are no longer used. For example, files that were created in the wrong directory or with the wrong title will remain. If you leave them, you might get confused by them later. I recommend cleaning out your site prior to generating it.
 
 Note: If you're building on an SSD, you should ignore this. Churning on a SSD can be costly.
 
@@ -442,7 +436,6 @@ $ hugo server --watch --verbose
 ```
 
 Here's sample output showing Hugo detecting a change to the template for the home page. Once generated, the web browser automatically reloaded the page. I've said this before, it's amazing.
-
 
 ```
 $ rm -rf public
@@ -478,8 +471,8 @@ in 1 ms
 The home page is one of a few special pages that Hugo creates automatically. As mentioned earlier, it looks for one of three files in the theme's layout/ directory:
 
 1. index.html
-2. _default/list.html
-3. _default/single.html
+2. \_default/list.html
+3. \_default/single.html
 
 We could update one of the default templates, but a good design decision is to update the most specific template available. That's not a hard and fast rule (in fact, we'll break it a few times in this tutorial), but it is a good generalization.
 
@@ -742,7 +735,7 @@ And, if that were entirely true, this tutorial would be much shorter. There are 
 
 We're working with posts, which are in the content/post/ directory. That means that their section is "post" (and if we don't do something weird, their type is also "post").
 
-Hugo uses the section and type to find the template file for every piece of content. Hugo will first look for a template file that matches the section or type name. If it can't find one, then it will look in the _default/ directory. There are some twists that we'll cover when we get to categories and tags, but for now we can assume that Hugo will try post/single.html, then _default/single.html.
+Hugo uses the section and type to find the template file for every piece of content. Hugo will first look for a template file that matches the section or type name. If it can't find one, then it will look in the \_default/ directory. There are some twists that we'll cover when we get to categories and tags, but for now we can assume that Hugo will try post/single.html, then \_default/single.html.
 
 Now that we know the search rule, let's see what we actually have available:
 
@@ -894,7 +887,7 @@ $ find themes/zafta -name list.html | xargs ls -l
 -rw-r--r--  1 quoha  staff  0 Sep 29 17:31 themes/zafta/layouts/_default/list.html
 ```
 
-As with the single post, we have to decide to update _default/list.html or create post/list.html. We still don't have multiple content types, so let's stay consistent and update the default list template.
+As with the single post, we have to decide to update \_default/list.html or create post/list.html. We still don't have multiple content types, so let's stay consistent and update the default list template.
 
 ## Creating Top Level Pages
 
@@ -1030,10 +1023,13 @@ The most noticeable difference between a template call and a partials call is th
 ```
 {{ template "theme/partials/header.html" . }}
 ```
+
 versus
+
 ```
 {{ partial "header.html" . }}
 ```
+
 Both pass in the context.
 
 Let's change the home page template to use these new partials.

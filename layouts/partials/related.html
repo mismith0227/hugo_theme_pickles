@@ -2,17 +2,24 @@
 {{ with $related }}
 <section class="p-related">
   <h3>See Also</h3>
-  <ul id="slider" class="p-related__list">
-    {{ range . }}
-    <li class="p-related__item js-related__item">
-      <a href="{{ .RelPermalink }}"
-        {{ with .Params.thumbnail }}
-          style="background-image: url({{ $.Site.BaseURL }}{{ . }});"
-        {{ end }}>
-        <span>{{ .Title }}</span>
-      </a>
-    </li>
-    {{ end }}
-  </ul>
+  <div class="p-related__list">
+    <div class="swiper-container">
+      <ul class="swiper-wrapper">
+        {{ range . }}
+        <li class="p-related__item swiper-slide">
+          <a href="{{ .RelPermalink }}"
+            {{ with .Params.thumbnail }}
+              style="background-image: url({{ $.Site.BaseURL }}{{ . }});"
+            {{ end }}>
+            <span>{{ .Title }}</span>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+    <div class="related-prev"></div>
+    <div class="related-next"></div>
+  </div>
+  
 </section>
 {{ end }}
