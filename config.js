@@ -29,7 +29,7 @@ const tasks = {
     filename: 'bundle.js'
   },
   watch: {
-    css: [`${config.dirs.src}/scss/**/*.css`],
+    css: [`${config.dirs.src}/scss/**/*.scss`],
     image: [`${config.dirs.src}/img/**/*`],
     webpack: [`${config.dirs.src}/js/**/*.js`]
   },

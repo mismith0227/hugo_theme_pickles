@@ -2,6 +2,7 @@ const gulp = require('gulp')
 const config = require('./config')
 const { src, dest, watch } = require('gulp')
 const del = require('del')
+const fibers = require('fibers')
 const sass = require('gulp-sass')
 const plumber = require('gulp-plumber')
 const rename = require('gulp-rename')
@@ -12,11 +13,13 @@ const webpackConfig = require('./webpack.config')
 
 // SCSS
 // =====================================================
+sass.compiler = require('sass')
 const compileSass = () => {
   return src(config.tasks.scss.src)
     .pipe(
       sass({
-        outputStyle: config.envProduction ? 'compressed' : 'nested'
+        outputStyle: config.envProduction ? 'compressed' : 'expanded',
+        fiber: fibers
       }).on('error', sass.logError)
     )
     .pipe(dest(config.tasks.scss.dest))
@@ -45,7 +48,7 @@ const font = () => {
 
 // SVG
 // =====================================================
-const bundleSvg = done => {
+const bundleSvg = (done) => {
   var svg = new Svgpack(config.tasks.svg.src, {
     dest: config.tasks.svg.dest
   })
@@ -61,14 +64,14 @@ const svgRename = () => {
 
 // Clean
 // =====================================================
-const clean = cb => {
+const clean = (cb) => {
   return del(config.tasks.clean, cb)
 }
 
 // Watch
 // =====================================================
 const watchFiles = () => {
-  watch(config.tasks.scss.src, compileSass)
+  watch(config.tasks.watch.css, compileSass)
   watch(config.tasks.webpack.src, compileJavascript)
   watch(config.tasks.images.src, minifyImages)
   watch(config.tasks.fonts.src, font)

@@ -1,12 +1,16 @@
-.slick-slider {
-  position: relative;
+@use "../variable/breakpoint.scss" as breakpoint;
+
+.swiper-container {
+  height: 150px;
 }
 
-.slick-slide {
-  margin: 0 8px;
+.swiper-wrapper {
+  margin: 0;
+  padding: 0;
 }
 
-.slick-arrow {
+.related-prev,
+.related-next {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -32,12 +36,12 @@
     height: 5px;
     border: solid #fafafa;
   }
-  @include mq-down(md) {
+  @include breakpoint.mq-down(md) {
     display: none !important;
   }
 }
 
-.slick-prev {
+.related-prev {
   left: -32px;
   &::after {
     left: 1px;
@@ -46,7 +50,7 @@
   }
 }
 
-.slick-next {
+.related-next {
   right: -32px;
   &::after {
     right: 1px;

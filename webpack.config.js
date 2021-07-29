@@ -1,6 +1,5 @@
 const config = require('./config')
 const path = require('path')
-const webpack = require('webpack')
 
 module.exports = {
   mode: config.envProduction ? 'production' : 'development',
@@ -21,15 +20,18 @@ module.exports = {
       {
         test: /\.js$/,
         use: 'babel-loader',
-        exclude: /node_modules/
+        exclude: /node_modules\/(?!(dom7|ssr-window|swiper)\/).*/
+      },
+      {
+        test: /\.css/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: { url: false }
+          }
+        ]
       }
     ]
-  },
-  plugins: [
-    new webpack.ProvidePlugin({
-      'window.jQuery': 'jquery',
-      $: 'jquery',
-      jQuery: 'jquery'
-    })
-  ]
+  }
 }
