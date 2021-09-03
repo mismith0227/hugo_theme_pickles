@@ -34,7 +34,7 @@
     "svgpack": "^3.1.1",
     "swiper": "^6.8.0",
     "webpack": "^4.41.2",
-    "webpack-stream": "^5.2.1",
+    "webpack-stream": "^7.0.0",
     "zooming": "^2.1.1"
   }
 }
