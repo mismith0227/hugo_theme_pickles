@@ -67,11 +67,20 @@ Now, you can start editing this file and add your own information!
 
 ## Customisation
 
-To hide the date in any page or post, set the `hideDate` parameter in the front matter:
+To hide the date in any post, set the `hideDate` parameter in the front matter:
 
 ```
 ---
 hideDate: true
+---
+```
+
+You can use `hideWordCount` and `headReadingTime` to hide word count and reading time on both, the posts and the post list.
+
+```
+---
+hideWordCount: true
+hideReadingTime: true
 ---
 ```
 
