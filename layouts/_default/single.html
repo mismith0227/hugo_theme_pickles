@@ -5,12 +5,19 @@
     <h1>{{ .Title }}</h1>
     {{ if eq (.Type | singularize) "post" }}
     <div>
-      {{ if not .Params.hideDate }}
-        <div class="c-time">
-          {{ partial "timestamp.html" . }}
+        <div class="c-meta">
+        {{ if not (.Param "hideDate") }}
+           {{ partial "timestamp.html" . }}
+        {{ end }}
+        {{ if not (.Param "hideWordCount") }}
+        {{ if not (.Param "hideDate") }} | {{ end }}
+           {{ partial "word_count.html" . }}
+        {{ end }}
+        {{ if not (.Param "hideReadingTime") }}
+        {{ if not (and (.Param "hideDate") (.Param "hideWordCount")) }} | {{ end }}
+           {{ partial "reading_time.html" . }}
+        {{ end }}
         </div>
-      {{ end }}
-      {{ partial "post_metadata.html" . }}
       </div>
       {{ range .Params.tags }}
       <a href="{{ $baseurl }}/tags/{{ . | urlize }}" class="c-tag">{{ . }}</a>
