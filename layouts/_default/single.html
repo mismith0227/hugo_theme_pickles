@@ -3,6 +3,7 @@
 <article class="p-article">
   <header>
     <h1>{{ .Title }}</h1>
+    {{ if eq (.Type | singularize) "post" }}
     <div>
       {{ if not .Params.hideDate }}
         <div class="c-time">
@@ -15,6 +16,7 @@
       <a href="{{ $baseurl }}/tags/{{ . | urlize }}" class="c-tag">{{ . }}</a>
       {{ end }}
     </div>
+    {{ end }}
   </header>
   {{ with .Params.thumbnail }}
     <img src="{{ . }}" alt="thumbnail" class="p-article__thumbnail">
@@ -23,6 +25,16 @@
     {{ .Content }}
   </section>
   <footer>
+    {{ if eq (.Type | singularize) "page" }}
+    <div>
+	    <div class="c-last-update">
+		    Last Update:
+		    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+			    {{ .Date.Format "Jan 2, 2006" }}
+		    </time>
+	    </div>
+    </div>
+    {{ else }}
     {{ partial "comment_custom.html" . }}
     {{ with ($.Param "disqus") }}
     <div id="disqus_thread"></div>
@@ -53,6 +65,7 @@
         </div>
       </div>
     </nav>
+    {{ end }}
     {{ partial "related.html" . }}
     {{ partial "siteinfo.html" . }}
   </footer>
