@@ -9,6 +9,8 @@
           {{ partial "timestamp.html" . }}
         </div>
       {{ end }}
+      {{ partial "post_metadata.html" . }}
+      </div>
       {{ range .Params.tags }}
       <a href="{{ $baseurl }}/tags/{{ . | urlize }}" class="c-tag">{{ . }}</a>
       {{ end }}

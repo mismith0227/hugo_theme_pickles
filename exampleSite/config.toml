@@ -9,6 +9,8 @@ googleAnalytics = "Your Google Analytics tracking id"
 
 [params]
   paginate = 10
+  wordCount = true
+  readingTime = true
   custom_css = ["/css/custom.css"]
   # Social accounts. Link to these accounts are displayed in the header and
   # footer

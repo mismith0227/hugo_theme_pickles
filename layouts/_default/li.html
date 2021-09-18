@@ -3,6 +3,7 @@
     <h2 class="c-title c-article__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     <p class="c-article__meta">
       {{ partial "timestamp.html" . }}
+      {{ partial "post_metadata.html" . }}
     </p>
   </header>
   <div class="c-article__summary">
