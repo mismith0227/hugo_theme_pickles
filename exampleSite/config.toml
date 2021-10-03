@@ -9,6 +9,12 @@ googleAnalytics = "Your Google Analytics tracking id"
 
 [params]
   paginate = 10
+  # Hide the date on posts
+  # hideDate = true
+  # Hide the word count on posts and in the posts list
+  # hideWordCount = true
+  # Hide the reading time on posts and in the posts list
+  # hideReadingTime = true
   custom_css = ["/css/custom.css"]
   # Social accounts. Link to these accounts are displayed in the header and
   # footer

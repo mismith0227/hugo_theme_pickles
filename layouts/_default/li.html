@@ -3,6 +3,12 @@
     <h2 class="c-title c-article__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     <p class="c-article__meta">
       {{ partial "timestamp.html" . }}
+      {{ if not (.Param "hideWordCount") }}
+         | {{ partial "word_count.html" . }}
+      {{ end }}
+      {{ if not (.Param "hideReadingTime") }}
+         | {{ partial "reading_time.html" . }}
+      {{ end }}
     </p>
   </header>
   <div class="c-article__summary">
