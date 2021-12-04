@@ -33,6 +33,7 @@ jobs:
           .travis.yml
           .gitignore
           .babelrc
+          .github/
           ./images
           webpack.config.js
           bin
