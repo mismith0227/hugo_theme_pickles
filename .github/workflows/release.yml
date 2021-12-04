@@ -7,7 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: checkout master
         uses: actions/checkout@v2
@@ -15,6 +14,9 @@ jobs:
           ref: master
 
       - name: Create new Branch
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         run: |
