@@ -19,9 +19,6 @@ jobs:
           node-version: '12.x'
 
       - name: Create new Branch
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         run: |
