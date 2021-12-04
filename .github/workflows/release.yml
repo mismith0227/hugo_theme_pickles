@@ -26,8 +26,7 @@ jobs:
             # Make sure .gitignore exists
             touch .gitignore
           fi
-          if ! grep -q .ci-tools .gitignore; then
-            # Add .ci-tools to .gitignore
+          if ! grep -q .gitignore; then
             echo "src
           .editorconfig
           .gitignore
