@@ -30,7 +30,6 @@ jobs:
             # Add .ci-tools to .gitignore
             echo "src
           .editorconfig
-          .travis.yml
           .gitignore
           .babelrc
           .github/
