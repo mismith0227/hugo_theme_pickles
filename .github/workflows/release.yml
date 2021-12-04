@@ -13,6 +13,11 @@ jobs:
         with:
           ref: master
 
+      - name: npm init
+        uses: actions/setup-node@v2
+        with:
+          node-version: '12.x'
+
       - name: Create new Branch
         uses: actions/setup-node@v1
         with:
