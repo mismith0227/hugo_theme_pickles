@@ -1,4 +1,4 @@
-# Pickles ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/mismith0227/hugo_theme_pickles/create%20new%20branch?style=flat-square) [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/mismith0227/hugo_theme_pickles/blob/master/license.md) [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+# Pickles ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/mismith0227/hugo_theme_pickles/create%20new%20branch?style=flat-square) ![GitHub](https://img.shields.io/github/license/mismith0227/hugo_theme_pickles?style=flat-square) [![Standard - JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 Pickles is a modern, simple and beautiful Hugo theme.
 
