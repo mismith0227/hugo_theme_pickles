@@ -1,0 +1,56 @@
+name: create new branch
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout master
+        uses: actions/checkout@v2
+        with:
+          ref: master
+
+      - name: Create new Branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        run: |
+          rm -rf .git
+          git init
+          git config --global user.email "ci@example.com"
+          git config --global user.name "CI Action"
+          if [[ ! -f .gitignore ]]; then
+            # Make sure .gitignore exists
+            touch .gitignore
+          fi
+          if ! grep -q .ci-tools .gitignore; then
+            # Add .ci-tools to .gitignore
+            echo "src
+          .editorconfig
+          .travis.yml
+          .gitignore
+          .babelrc
+          ./images
+          webpack.config.js
+          bin
+          gulpfile.js
+          .prettierignore
+          config.js
+          node_modules
+          content
+          package.json
+          svgpack
+          tmp
+          config.toml
+          yarn.lock
+          renovate.json
+          !/exampleSite/config.toml
+          !/exampleSite/content
+          !/exampleSite/static" >> .gitignore
+          fi
+          git add .
+          git commit -m "Deploy from Github Actions"
+          git push --force --quiet "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git" master:release
