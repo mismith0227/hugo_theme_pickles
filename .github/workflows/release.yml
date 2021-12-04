@@ -37,6 +37,7 @@ jobs:
           bin
           gulpfile.js
           .prettierignore
+          .prettierrc
           config.js
           node_modules
           content
