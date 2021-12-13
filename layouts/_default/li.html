@@ -3,6 +3,9 @@
     <h2 class="c-title c-article__title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     <p class="c-article__meta">
       {{ partial "timestamp.html" . }}
+      {{ if not (.Param "hideModifiedDate") }}
+         | {{ partial "modified_date.html" . }}
+      {{ end }}
       {{ if not (.Param "hideWordCount") }}
          | {{ partial "word_count.html" . }}
       {{ end }}
