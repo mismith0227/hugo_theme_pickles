@@ -31,7 +31,7 @@
     "gulp-rename": "^2.0.0",
     "minimist": "^1.2.0",
     "postcss": "^8.4.5",
-    "standard": "^14.3.1",
+    "standard": "^16.0.0",
     "standard-loader": "^7.0.0",
     "style-loader": "^2.0.0",
     "svgpack": "^3.1.1",
