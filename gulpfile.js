@@ -1,10 +1,13 @@
+const autoprefixer = require('autoprefixer')
 const gulp = require('gulp')
 const config = require('./config')
+const cssnano = require('cssnano')
 const { src, dest, watch } = require('gulp')
 const del = require('del')
 const fibers = require('fibers')
 const sass = require('gulp-sass')
 const plumber = require('gulp-plumber')
+const postcss = require('gulp-postcss')
 const rename = require('gulp-rename')
 const Svgpack = require('svgpack')
 const webpackStream = require('webpack-stream')
@@ -15,6 +18,11 @@ const webpackConfig = require('./webpack.config')
 // =====================================================
 sass.compiler = require('sass')
 const compileSass = () => {
+  const postcssPlugins = [
+    autoprefixer(config.tasks.scss.settings.autoprefixer),
+    cssnano(config.tasks.scss.settings.cssnano)
+  ]
+
   return src(config.tasks.scss.src)
     .pipe(
       sass({
@@ -22,6 +30,7 @@ const compileSass = () => {
         fiber: fibers
       }).on('error', sass.logError)
     )
+    .pipe(postcss(postcssPlugins))
     .pipe(dest(config.tasks.scss.dest))
 }
 

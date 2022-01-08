@@ -21,7 +21,14 @@ const config = {
 const tasks = {
   scss: {
     src: `${config.dirs.src}/scss/style.scss`,
-    dest: `${config.dirs.dest}/css`
+    dest: `${config.dirs.dest}/css`,
+    settings: {
+      autoprefixer: {
+        cascade: false,
+        grid: true
+      },
+      cssnano: { autoprefixer: false }
+    }
   },
   webpack: {
     src: `${config.dirs.src}/js/app.js`,
