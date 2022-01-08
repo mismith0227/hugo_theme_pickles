@@ -24,7 +24,7 @@
     "babel-loader": "^8.0.6",
     "css-loader": "^5.0.1",
     "cssnano": "^5.0.15",
-    "del": "^5.1.0",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.1",
