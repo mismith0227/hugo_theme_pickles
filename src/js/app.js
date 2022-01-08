@@ -1,7 +1,5 @@
 import Zooming from 'zooming'
 import Swiper, { Navigation } from 'swiper'
-// import Swiper styles
-import 'swiper/swiper-bundle.css'
 Swiper.use([Navigation])
 
 document.addEventListener('DOMContentLoaded', () => {
