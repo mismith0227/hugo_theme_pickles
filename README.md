@@ -15,7 +15,7 @@ Pickles is a modern, simple and beautiful Hugo theme.
 - Responsive design
 - SVG Sprite
 
-Use short code for Image Zoom.
+There is a custom shortcode for Image Zoom. You can use it like so:
 
 ```
 {{< zoom-img src="/images/default.jpg" >}}
@@ -32,7 +32,7 @@ Use short code for Image Zoom.
 
 ## Installation
 
-In your hugo site directory, run:
+In your Hugo site directory, run:
 
 ```shell
 $ mkdir themes
@@ -40,13 +40,13 @@ $ cd themes
 $ git clone -b release https://github.com/mismith0227/hugo_theme_pickles
 ```
 
-Or download it from the release branch
+Or download it from the release branch:
 
 [release](https://github.com/mismith0227/hugo_theme_pickles/tree/release)
 
 ## Usage
 
-Use hugo's -t hugo_theme_pickles or --theme=hugo_theme_pickles option with hugo commands. Example:
+Use Hugo's `-t hugo_theme_pickles` or `--theme=hugo_theme_pickles option` with hugo commands. For example:
 
 ```shell
 $ hugo server -t hugo_theme_pickles -w -D
@@ -54,7 +54,7 @@ $ hugo server -t hugo_theme_pickles -w -D
 
 ## Configuration
 
-You may specify following options in `config.toml` of your site to make use of
+You may specify the following options in `config.toml` of your site to make use of
 this theme's features.
 
 For getting started with Pickles, copy the [config.toml](https://github.com/mismith0227/hugo_theme_pickles/blob/master/exampleSite/config.toml) file from the exampleSite directory inside Pickles’s repository to your site repository.
@@ -67,9 +67,9 @@ Now, you can start editing this file and add your own information!
 
 ## Customisation
 
-To hide the date in any post, set the `hideDate` parameter in the front matter:
+To hide the date in a post, set the `hideDate` parameter in the front matter:
 
-```
+```markdown
 ---
 hideDate: true
 ---
@@ -77,7 +77,7 @@ hideDate: true
 
 You can use `hideWordCount` and `headReadingTime` to hide word count and reading time on both, the posts and the post list.
 
-```
+```markdown
 ---
 hideWordCount: true
 hideReadingTime: true
@@ -100,19 +100,19 @@ yarn
 
 1.  Run gulp. You don't need to install gulp globally.
 
-```
+```js
 // Development
-$ yarn run dev
-$ // On another tab
-$ yarn run hugo
+yarn run dev
+// On another tab
+yarn run hugo
 
 // Production (compress)
-$ yarn run prod
-$ // On another tab
-$ yarn run hugo
+yarn run prod
+// On another tab
+yarn run hugo
 
 // Build
-$ yarn run build
+yarn run build
 ```
 
 ## License
