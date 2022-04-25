@@ -13,9 +13,9 @@
   "author": "mismith0227",
   "license": "MIT",
   "devDependencies": {
-    "fibers": "^5.0.0",
-    "gulp-sass": "^4.0.2",
-    "sass": "^1.36.0"
+    "fibers": "5.0.0",
+    "gulp-sass": "4.1.1",
+    "sass": "1.36.0"
   },
   "dependencies": {
     "@babel/core": "^7.7.5",
