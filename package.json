@@ -15,7 +15,7 @@
   "devDependencies": {
     "fibers": "^5.0.0",
     "gulp-sass": "^4.0.2",
-    "sass": "^1.36.0"
+    "sass": "1.55.0"
   },
   "dependencies": {
     "@babel/core": "^7.7.5",
