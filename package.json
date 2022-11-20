@@ -14,7 +14,7 @@
   "license": "MIT",
   "devDependencies": {
     "fibers": "^5.0.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^5.0.0",
     "sass": "^1.36.0"
   },
   "dependencies": {
