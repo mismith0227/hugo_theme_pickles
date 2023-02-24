@@ -11,7 +11,7 @@ other = "Newer"
 other = "Older"
 
 [page-count]
-other = "Page {{ .PageNumber }} of {{.TotalPages}}"
+other = "Page {{ .PageNumber }} of {{ .TotalPages }}"
 
 [social-medium]
 other = "medium"
