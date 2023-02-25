@@ -20,9 +20,9 @@ other = "medium"
 other = "twitter"
 
 [reading-time-minutes]
-zero = "{{ . }}mins"
-one = "{{ . }}min"
-other = "{{ . }}mins"
+zero = "{{ .ReadingTime }}mins"
+one = "{{ .ReadingTime }}min"
+other = "{{ .ReadingTime }}mins"
 
 [see-also]
 other = ""
@@ -34,9 +34,9 @@ other = "Entre em contato"
 other = "Publicado em"
 
 [word-count]
-zero = "{{ . }} palavras"
-one = "{{ . }} palavra"
-other = "{{ . }} palavras"
+zero = "{{ .WordCount }} palavras"
+one = "{{ .WordCount }} palavra"
+other = "{{ .WordCount }} palavras"
 
 [social-facebook]
 other = "facebook"
