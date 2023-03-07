@@ -1,7 +1,7 @@
 {{ $related := .Site.RegularPages.Related . | first 6 }}
 {{ with $related }}
 <section class="p-related">
-  <h3>See Also</h3>
+  <h3>{{ i18n "see-also" }}</h3>
   <div class="p-related__list">
     <div class="swiper swiper-container">
       <ul class="swiper-wrapper">
