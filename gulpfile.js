@@ -3,9 +3,8 @@ const gulp = require('gulp')
 const config = require('./config')
 const cssnano = require('cssnano')
 const { src, dest, watch } = require('gulp')
+const sass = require('gulp-sass')(require('sass'))
 const del = require('del')
-const fibers = require('fibers')
-const sass = require('gulp-sass')
 const plumber = require('gulp-plumber')
 const postcss = require('gulp-postcss')
 const rename = require('gulp-rename')
@@ -16,7 +15,7 @@ const webpackConfig = require('./webpack.config')
 
 // SCSS
 // =====================================================
-sass.compiler = require('sass')
+
 const compileSass = () => {
   const postcssPlugins = [
     autoprefixer(config.tasks.scss.settings.autoprefixer),
@@ -27,7 +26,6 @@ const compileSass = () => {
     .pipe(
       sass({
         outputStyle: config.envProduction ? 'compressed' : 'expanded',
-        fiber: fibers
       }).on('error', sass.logError)
     )
     .pipe(postcss(postcssPlugins))

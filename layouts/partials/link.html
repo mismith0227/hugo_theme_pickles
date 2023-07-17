@@ -1,4 +1,4 @@
-{{ if or ( $.Param "medium" ) ( $.Param "twitter" ) ( $.Param "facebook" ) ( $.Param "instagram" ) ( $.Param "github" ) ( $.Param "gitlab" ) ( $.Param "npm" ) ( $.Param "codepen" ) ( $.Param "dribbble" ) ( $.Param "fivehundredpx" ) ( $.Param "flickr" ) ( $.Param "pinterest" ) ( $.Param "tumblr" ) ( $.Param "vimeo" ) ( $.Param "youtube" ) ( $.Param "linkedin" ) ( $.Param "strava" ) }}
+{{ if or ( $.Param "medium" ) ( $.Param "twitter" ) ( $.Param "facebook" ) ( $.Param "instagram" ) ( $.Param "github" ) ( $.Param "gitlab" ) ( $.Param "npm" ) ( $.Param "codepen" ) ( $.Param "dribbble" ) ( $.Param "fivehundredpx" ) ( $.Param "flickr" ) ( $.Param "pinterest" ) ( $.Param "tumblr" ) ( $.Param "vimeo" ) ( $.Param "youtube" ) ( $.Param "linkedin" ) ( $.Param "strava" ) ($.Param "threads") }}
 <ul class="c-links">
   {{ with ($.Param "medium") }}
   <li class="c-links__item">
@@ -166,6 +166,16 @@
       <svg viewBox="0 0 64 64" class="c-links__icon">
         <title>{{ i18n "social-strava" }}</title>
         <use xlink:href="#icon-strava"></use>
+      </svg>
+    </a>
+  </li>
+  {{ end }}
+  {{ with ($.Param "threads") }}
+  <li class="c-links__item">
+    <a href="https://www.threads.net/@{{ . }}" target="_blank">
+      <svg viewBox="0 0 64 64" class="c-links__icon">
+        <title>{{ i18n "social-threads" }}</title>
+        <use xlink:href="#icon-threads"></use>
       </svg>
     </a>
   </li>
