@@ -1,0 +1,78 @@
+{{ partial "header.html" . }}
+{{ $baseurl := .Site.BaseURL | sanitizeurl }}
+<article class="p-article">
+  <header>
+    <h1>{{ .Title }}</h1>
+    {{ if eq (.Type | singularize) "post" }}
+    <div>
+        <div class="c-meta">
+        {{ if not (.Param "hideDate") }}
+           {{ partial "timestamp.html" . }}
+        {{ end }}
+        {{ if not (.Param "hideWordCount") }}
+        {{ if not (.Param "hideDate") }} | {{ end }}
+           {{ partial "word_count.html" . }}
+        {{ end }}
+        {{ if not (.Param "hideReadingTime") }}
+        {{ if not (and (.Param "hideDate") (.Param "hideWordCount")) }} | {{ end }}
+           {{ partial "reading_time.html" . }}
+        {{ end }}
+        </div>
+      </div>
+      {{ range .Params.tags }}
+      <a href="{{ $baseurl }}/tags/{{ . | urlize }}" class="c-tag">{{ . }}</a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </header>
+  {{ with .Params.thumbnail }}
+    <img src="{{ . }}" alt="thumbnail" class="p-article__thumbnail">
+  {{ end }}
+  <section id="js-article" class="p-article__body">
+    {{ .Content }}
+  </section>
+  <footer>
+    {{ if eq (.Type | singularize) "page" }}
+    <div>
+	    <div class="c-last-update">
+		    Last Update:
+		    <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+			    {{ .Date.Format "Jan 2, 2006" }}
+		    </time>
+	    </div>
+    </div>
+    {{ else }}
+    {{ partial "comment_custom.html" . }}
+    {{ with ($.Param "disqus") }}
+    <div id="disqus_thread"></div>
+    <script>
+    var disqus_shortname = '{{ . }}';
+    (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    {{ end }}
+    <nav class="p-pagination c-pagination">
+      <div class="c-pagination__ctrl">
+        <div class="c-pagination__newer">
+          {{ if .NextInSection }}
+          <a href="{{ .NextInSection.Permalink }}">Newer</a>
+          {{ end }}
+        </div>
+        <div class="c-pagination__older">
+          {{ if .PrevInSection }}
+          <a href="{{ .PrevInSection.Permalink }}">Older</a>
+          {{ end }}
+        </div>
+      </div>
+    </nav>
+    {{ end }}
+    {{ partial "related.html" . }}
+    {{ partial "siteinfo.html" . }}
+  </footer>
+</article>
+{{ partial "footer.html" . }}

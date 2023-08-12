@@ -1,0 +1,31 @@
+  </main>
+  {{ partial "menu.html" . }}
+  <footer class="l-footer">
+    {{ partial "link.html" . }}
+
+    <p class="p-copyright">
+      {{ with .Site.Copyright | safeHTML }}
+        {{ . }}
+      {{ else }}
+        {{ if ($.Param "author") }}
+          {{ if ($.Param "authorwebsite") }}
+            <a href="{{ $.Param "authorwebsite" }}">{{ $.Param "author" }}</a>
+          {{ else }}
+            {{ $.Param "author" }}
+          {{ end }}
+        {{ end }}
+        &nbsp;&bull;&nbsp;
+        {{ .Site.LastChange.Format "2006" }}
+
+        {{ if .Site.Title }}
+          &nbsp;&bull;&nbsp;
+          <a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a>
+        {{ end }}
+      {{ end }}
+    </p>
+  </footer>
+
+  {{- partial "footer_custom.html" . }}
+  <script type="text/javascript" src="{{ .Site.BaseURL }}js/bundle.js" defer></script>
+</body>
+</html>
