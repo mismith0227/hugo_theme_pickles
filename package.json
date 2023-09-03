@@ -32,7 +32,7 @@
     "postcss": "^8.4.5",
     "standard": "^14.3.1",
     "standard-loader": "^7.0.0",
-    "style-loader": "^2.0.0",
+    "style-loader": "^3.0.0",
     "svgpack": "^3.1.1",
     "swiper": "^7.4.1",
     "webpack": "^5.58.1",
