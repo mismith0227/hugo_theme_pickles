@@ -26,6 +26,7 @@ paginate = 10
   # Social accounts. Link to these accounts are displayed in the header and
   # footer
   twitter = "Your Twitter username"
+  mastodon = "Your Mastodon username"
   facebook = "Your Facebook username"
   instagram = "Your Instagram username"
   github = "Your GitHub username"
