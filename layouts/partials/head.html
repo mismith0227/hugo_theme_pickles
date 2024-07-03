@@ -39,7 +39,7 @@
   <!-- Hugo Version Number -->
   {{ hugo.Generator -}}
 
-  {{ if not .Site.IsServer }}
+  {{ if not hugo.IsServer }}
     {{ template "_internal/google_analytics.html" . }}
   {{ end }}
 
