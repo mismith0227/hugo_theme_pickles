@@ -1,5 +1,5 @@
 {{ partial "header.html" . }}
-{{ $baseurl := .Site.BaseURL | sanitizeurl }}
+{{ $baseurl := .Site.BaseURL | urlize }}
 <article class="p-article">
   <header>
     <h1>{{ .Title }}</h1>
