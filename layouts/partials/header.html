@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" prefix="og: http://ogp.me/ns#">
+{{ partial "head.html" . }}
+<body>
+  <a href="#main" class="skip-link p-screen-reader-text">{{ i18n "skip-to-content" }}</a>
+  {{ partial "svgpack-sprite.html" . }}
+  <header class="l-header">
+    {{ if .IsPage }}
+    <p class="c-title p-title"><a href="{{ .Site.BaseURL }}" class="p-title__link">{{ .Site.Title }}</a></p>
+    {{ else }}
+    <h1 class="c-title p-title"><a href="{{ .Site.BaseURL }}" class="p-title__link">{{ .Site.Title }}</a></h1>
+    {{ end }}
+    {{ with ($.Param "subtitle") }}
+    <p class="p-subtitle">
+      {{ . }}
+    </p>
+    {{ end }}
+  </header>
+  {{- partial "header_custom.html" . }}
+  <main id="main" class="l-main">
