@@ -1,5 +1,4 @@
 {{ partial "header.html" . }}
-{{ $baseurl := .Site.BaseURL | urlize }}
 <article class="p-article">
   <header>
     <h1>{{ .Title }}</h1>
@@ -20,7 +19,7 @@
         </div>
       </div>
       {{ range .Params.tags }}
-      <a href="{{ $baseurl }}/tags/{{ . | urlize }}" class="c-tag">{{ . }}</a>
+      <a href="{{ absURL "tags"}}/{{ . | urlize }}" class="c-tag">{{ . }}</a>
       {{ end }}
     </div>
     {{ end }}
