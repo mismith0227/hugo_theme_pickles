@@ -2,7 +2,7 @@
   "extends": [
     "config:base"
   ],
-  "timezone": "Asia/Tokyo",
+  "timezone": "Asia/Shanghai",
   "schedule": [
     "after 10am on friday"
   ],
