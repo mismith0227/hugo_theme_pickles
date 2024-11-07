@@ -1,0 +1,19 @@
+{{ partial "header.html" . }}
+<h2 class="c-title p-tag-title">{{ .Title }}</h2>
+{{ if isset .Site.Taxonomies "tags" }}
+{{ $mytag := .Title }}
+{{ range $index, $page := (.Paginate (where .Data.Pages "Type" "posts")).Pages }}
+{{ if ne $index 0 }}
+{{ end }}
+{{ .Render "li" }}
+{{ end }}
+{{ else }}
+{{ range $index, $page := (.Paginate (where .Site.RegularPages "Type" "posts")).Pages }}
+{{ if ne $index 0 }}
+{{ end }}
+{{ .Render "li" }}
+{{ end }}
+{{ end }}
+{{ partial "pagination.html" .Paginator }}
+{{ partial "siteinfo.html" . }}
+{{ partial "footer.html" . }}

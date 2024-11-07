@@ -1,0 +1,84 @@
+[updated-on]
+other = "Atualizado em"
+
+[skip-to-content]
+other = "Pular para conteúdo"
+
+[newer]
+other = "Mais recentes"
+
+[older]
+other = "Mais antigos"
+
+[page-count]
+other = "Página {{ .PageNumber }} de {{ .TotalPages }}"
+
+[social-medium]
+other = "medium"
+
+[social-twitter]
+other = "twitter"
+
+[reading-time-minutes]
+zero = "{{ .ReadingTime }}mins"
+one = "{{ .ReadingTime }}min"
+other = "{{ .ReadingTime }}mins"
+
+[see-also]
+other = ""
+
+[contact-me]
+other = "Entre em contato"
+
+[posted-on]
+other = "Publicado em"
+
+[word-count]
+zero = "{{ .WordCount }} palavras"
+one = "{{ .WordCount }} palavra"
+other = "{{ .WordCount }} palavras"
+
+[social-facebook]
+other = "facebook"
+
+[social-instagram]
+other = "instagram"
+
+[social-github]
+other = "github"
+
+[social-gitlab]
+other = "gitlab"
+
+[social-npm]
+other = "npm"
+
+[social-codepen]
+other = "codepen"
+
+[social-dribbble]
+other = "dribbble"
+
+[social-500px]
+other = "500px"
+
+[social-flickr]
+other = "flickr"
+
+[social-pinterest]
+other = "pinterest"
+
+[social-tumblr]
+other = "tumblr"
+
+[social-vimeo]
+other = "vimeo"
+
+[social-youtube]
+other = "youtube"
+
+[social-linkedin]
+other = "linkedin"
+
+[social-strava]
+other = "strava"
