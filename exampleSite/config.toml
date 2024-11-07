@@ -44,6 +44,7 @@ paginate = 10
   medium = "Your Medium username"
   strava = "Your Strava userid"
   threads = "Your Threads username"
+  bluesky = "Your Bluesky username"
   # Disqus shortname
   disqus = ""
   author = "Your Name"
