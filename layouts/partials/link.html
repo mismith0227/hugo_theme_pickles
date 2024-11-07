@@ -10,6 +10,16 @@
     </a>
   </li>
   {{ end }}
+  {{ with ($.Param "bluesky") }}
+  <li class="c-links__item">
+    <a href="https://bsky.app/profile/{{ . }}" target="_blank">
+      <svg viewBox="0 0 64 64" class="c-links__icon">
+        <title>{{ i18n "social-bluesky" }}</title>
+        <use xlink:href="#icon-bluesky"></use>
+      </svg>
+    </a>
+  </li>
+  {{ end }}
   {{ with ($.Param "twitter") }}
   <li class="c-links__item">
     <a href="https://twitter.com/{{ . }}" target="_blank">
