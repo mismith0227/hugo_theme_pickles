@@ -1,5 +1,4 @@
   </main>
-  {{ partial "menu.html" . }}
   <footer class="l-footer">
     {{ partial "link.html" . }}
 
@@ -15,12 +14,17 @@
           {{ end }}
         {{ end }}
         &nbsp;&bull;&nbsp;
-        {{ .Site.LastChange.Format "2006" }}
+        {{ .Site.Lastmod.Format "2006" }}
 
         {{ if .Site.Title }}
           &nbsp;&bull;&nbsp;
           <a href="{{ "" | absLangURL }}">{{ .Site.Title }}</a>
-        {{ end }}
+        {{ end }} 
+
+        {{ if .Param "beian" }}
+        &nbsp;&bull;&nbsp;
+        <a href="https://beian.miit.gov.cn/" target="_blank">{{ .Param "beian" }} </a>
+        {{ end }}        
       {{ end }}
     </p>
   </footer>
