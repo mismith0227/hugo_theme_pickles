@@ -34,7 +34,7 @@
     "standard-loader": "^7.0.0",
     "style-loader": "^2.0.0",
     "svgpack": "^3.1.1",
-    "swiper": "^7.4.1",
+    "swiper": "^12.0.0",
     "webpack": "^5.58.1",
     "webpack-stream": "^7.0.0",
     "zooming": "^2.1.1"
